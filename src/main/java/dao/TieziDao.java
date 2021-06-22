@@ -1,5 +1,6 @@
 package dao;
 
+import entity.Replytiezi;
 import entity.Tiezi;
 
 import java.util.List;
@@ -25,4 +26,9 @@ public interface TieziDao {
     public void fatie(Tiezi tiezi);
 
     public void deleteTiezi(int id);
+
+    public void jiajing(int id);
+
+
+    public void replytie(Replytiezi tiezi);
 }

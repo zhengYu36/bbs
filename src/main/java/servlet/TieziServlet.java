@@ -1,6 +1,7 @@
 package servlet;
 
 import entity.Tiezi;
+import entity.Users;
 import jdk.nashorn.internal.parser.JSONParser;
 import net.sf.json.JSONArray;
 import service.TieziService;
@@ -11,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -36,6 +38,13 @@ public class TieziServlet extends HttpServlet {
         tieziService.deleteTiezi(id);
         response.sendRedirect(request.getContextPath()+"/admin/tieziManager.html");
     }
+
+    public void jiajing(HttpServletRequest request,HttpServletResponse response) throws IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        tieziService.jiajing(id);
+        response.sendRedirect(request.getContextPath()+"/admin/tieziManager.html");
+    }
+
     /**
      * 发帖
      * @param request
@@ -44,9 +53,20 @@ public class TieziServlet extends HttpServlet {
     public void fatie(HttpServletRequest request,HttpServletResponse response){
         String title = request.getParameter("title");
         String tcontent = request.getParameter("tcontent");
+
+        int uid = 0;
+
+        HttpSession session = request.getSession();
+        List<Users> users = (List<Users>) session.getAttribute("userInfo");
+        if(users != null && users.size() > 0){
+            Users users1 = users.get(0);
+            uid = users1.getUid();
+        }
+
         Tiezi tiezi = new Tiezi();
         tiezi.setTitle(title);
         tiezi.setTcontent(tcontent);
+        tiezi.setUid(uid);
         tieziService.fatie(tiezi);
     }
     /**

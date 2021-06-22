@@ -4,13 +4,28 @@ import java.util.Date;
 
 public class Tiezi {
     private int tid;
+
+    //标题
     private String title;
+
+    //内容
     private String tcontent;
+
+    //创建时间
     private Date tdate;
-    private int tnum1;
-    private int tnum2;
-    private int pid;
-    private int uid;
+
+    //浏览人数
+    private Integer tnum1;
+
+    //回帖人数
+    private Integer tnum2;
+    private Integer pid;
+
+    //用户id
+    private Integer uid;
+
+    //0 不是精帖  1 是精帖
+    private Integer status;
 
     public int getTid() {
         return tid;
@@ -44,35 +59,43 @@ public class Tiezi {
         this.tdate = tdate;
     }
 
-    public int getTnum1() {
+    public Integer getTnum1() {
         return tnum1;
     }
 
-    public void setTnum1(int tnum1) {
+    public void setTnum1(Integer tnum1) {
         this.tnum1 = tnum1;
     }
 
-    public int getTnum2() {
+    public Integer getTnum2() {
         return tnum2;
     }
 
-    public void setTnum2(int tnum2) {
+    public void setTnum2(Integer tnum2) {
         this.tnum2 = tnum2;
     }
 
-    public int getPid() {
+    public Integer getPid() {
         return pid;
     }
 
-    public void setPid(int pid) {
+    public void setPid(Integer pid) {
         this.pid = pid;
     }
 
-    public int getUid() {
+    public Integer getUid() {
         return uid;
     }
 
-    public void setUid(int uid) {
+    public void setUid(Integer uid) {
         this.uid = uid;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 }

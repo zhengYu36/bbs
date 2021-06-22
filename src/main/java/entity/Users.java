@@ -2,11 +2,17 @@ package entity;
 
 public class Users {
     private int uid;
+    //名称
     private String uname;
+    //密码
     private String upwd;
     private String uquestion;
+
     private String uanswer;
+    //邮箱
     private String uemail;
+
+    //权限(1:管理员;0:会员)
     private String utype;
 
     public int getUid() {

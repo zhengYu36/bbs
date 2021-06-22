@@ -1,5 +1,6 @@
 package service;
 
+import entity.Replytiezi;
 import entity.Tiezi;
 
 import java.util.List;
@@ -25,4 +26,12 @@ public interface TieziService {
     public void fatie(Tiezi tiezi);
 
     public void deleteTiezi(int id);
+
+    /**
+     * 回帖
+     * @param tiezi
+     */
+    public void replytie(Replytiezi tiezi);
+
+    public void jiajing(int id);
 }

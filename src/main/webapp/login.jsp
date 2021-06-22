@@ -26,7 +26,7 @@
                 if(msg == 1){
                     location.href="admin/index.html";
 				}else if (msg == 0) {
-                    location.href="index.jsp";
+                    location.href="fatie.jsp";
 				}else {
                     alert("请输入正确的用户名和密码");
 				}

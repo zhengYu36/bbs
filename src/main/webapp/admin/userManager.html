@@ -24,7 +24,6 @@
             <table class="layui-table admin-table">
                 <thead>
                 <tr>
-                    <th style="width: 30px;"><input type="checkbox" lay-filter="allselector" lay-skin="primary"></th>
                     <th>ID</th>
                     <th>用户名</th>
                     <th>邮箱</th>
@@ -59,7 +58,6 @@
                 for (let i = 0; i < jsonData.length; i++) {
                     $("#content").append(
                         `<tr>
-							<td style="width: 30px;"><input type="checkbox" lay-filter="allselector" lay-skin="primary"></td>
 							<td>` + (i + 1) + `</td>
 							<td>` + jsonData[i]['uname'] + `</td>
 							<td>` + jsonData[i]['uemail'] + `</td>

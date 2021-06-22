@@ -1,10 +1,12 @@
 package dao.impl;
 
 import dao.TieziDao;
+import entity.Replytiezi;
 import entity.Tiezi;
 import untils.DaoUtlis;
 
 import javax.rmi.CORBA.Tie;
+import java.util.Date;
 import java.util.List;
 
 public class TieziDaoImpl extends DaoUtlis implements TieziDao {
@@ -41,8 +43,8 @@ public class TieziDaoImpl extends DaoUtlis implements TieziDao {
      */
     @Override
     public void fatie(Tiezi tiezi) {
-        String sql = "INSERT INTO tiezi (title,tcontent) VALUES(?,?);";
-        Object[] num = {tiezi.getTitle(),tiezi.getTcontent()};
+        String sql = "INSERT INTO tiezi (title,tcontent,tdate,tnum1,tnum2,pid,uid,status) VALUES(?,?,?,?,?,?,?,?);";
+        Object[] num = {tiezi.getTitle(),tiezi.getTcontent(),new Date(),0,0,0,tiezi.getUid(),0};
         super.update(sql,num);
     }
 
@@ -50,6 +52,21 @@ public class TieziDaoImpl extends DaoUtlis implements TieziDao {
     public void deleteTiezi(int id) {
         String sql = "delete from tiezi where tid = ?";
         Object[] num = {id};
+        super.update(sql,num);
+    }
+
+
+    @Override
+    public void jiajing(int id) {
+        String sql = "update tiezi set status = 1 where tid = ?";
+        Object[] num = {id};
+        super.update(sql,num);
+    }
+
+    @Override
+    public void replytie(Replytiezi tiezi) {
+        String sql = "insert into replytiezi (tcontent,pid,uid) values(?,?,?)";
+        Object[] num = {tiezi.getTcontent(),tiezi.getPid(),tiezi.getUid()};
         super.update(sql,num);
     }
 }

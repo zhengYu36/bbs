@@ -18,7 +18,6 @@
 					<table class="layui-table admin-table">
 						<thead>
 							<tr>
-								<th style="width: 30px;"><input type="checkbox" lay-filter="allselector" lay-skin="primary"></th>
 								<th>ID</th>
 								<th>帖子名称</th>
 								<th>帖子内容</th>
@@ -68,14 +67,15 @@
                         for (let i = 0; i < jsonData.length; i++) {
                             $("#content").append(
                                 `<tr>
-							<td style="width: 30px;"><input type="checkbox" lay-filter="allselector" lay-skin="primary"></td>
+
 							<td>` + (i + 1) + `</td>
 							<td>` + jsonData[i]['title'] + `</td>
 							<td>` + jsonData[i]['tcontent'] + `</td>
 							<td>` + ChangeDateFormat(jsonData[i]['tdate']) +`</td>
 							<td>` + jsonData[i]['tnum1'] +`</td>
 							<td>` + jsonData[i]['tnum2'] +`</td>
-							<td><button class="layui-btn layui-btn-small layui-icon" onclick="editUser(` + jsonData[i]['tid'] + `)">权限
+							<td><button class="layui-btn layui-btn-small layui-icon" onclick="jiajing(` +
+									jsonData[i]['tid'] + `)">加精
 							</button>
 								<button class="layui-btn layui-btn-small layui-btn-danger layui-icon" onclick="deleteTiezi(` + jsonData[i]['tid'] + `)">删除
 								</button>
@@ -86,6 +86,24 @@
                     }
 				})
             });
+
+			//加精
+			function jiajing(id) {
+				var $ = layui.jquery,
+						layer = layui.layer, //获取当前窗口的layer对象
+						form = layui.form();
+				layer.confirm("是否加精？", {icon: 3, title: '确定'}, function (index) {
+					$.ajax({
+						type:'post',
+						url:'/tieziServlet?method=jiajing',
+						data:{id : id}
+					})
+					layer.msg('加精成功', {icon: 6, time: 500}, function () {
+						location.reload();
+					});
+					layer.close(index);
+				})
+			}
 
 			//删除
 			function deleteTiezi(id) {

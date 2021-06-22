@@ -2,6 +2,7 @@ package service.impl;
 
 import dao.TieziDao;
 import dao.impl.TieziDaoImpl;
+import entity.Replytiezi;
 import entity.Tiezi;
 import service.TieziService;
 
@@ -47,5 +48,15 @@ public class TieziServiceImpl implements TieziService {
     @Override
     public void deleteTiezi(int id) {
         tieziDao.deleteTiezi(id);
+    }
+
+    @Override
+    public void jiajing(int id) {
+        tieziDao.jiajing(id);
+    }
+
+    @Override
+    public void replytie(Replytiezi tiezi) {
+        tieziDao.replytie(tiezi);
     }
 }
