@@ -17,6 +17,7 @@ public interface TieziDao {
      * @return
      */
     public List<Tiezi> TieziSingleShow(Tiezi tiezi);
+    public List<Replytiezi> replyTieziSingleShow(Tiezi tiezi);
 
     /**
      * 发帖
@@ -24,6 +25,8 @@ public interface TieziDao {
      * @return
      */
     public void fatie(Tiezi tiezi);
+
+    public void huitie(Replytiezi tiezi);
 
     public void deleteTiezi(int id);
 

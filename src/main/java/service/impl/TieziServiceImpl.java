@@ -28,7 +28,12 @@ public class TieziServiceImpl implements TieziService {
      */
     @Override
     public List<Tiezi> TieziSingleShow(Tiezi tiezi) {
-        return tieziDao.TieziSingleShow(tiezi);
+        List<Tiezi> result = tieziDao.TieziSingleShow(tiezi);
+        if(result != null && result.size() >0){
+            //获取帖子的回帖信息
+            result.get(0).setReplytiezis(tieziDao.replyTieziSingleShow(tiezi));
+        }
+        return result;
     }
 
     /**
@@ -39,6 +44,11 @@ public class TieziServiceImpl implements TieziService {
     @Override
     public void fatie(Tiezi tiezi) {
         tieziDao.fatie(tiezi);
+    }
+
+    @Override
+    public void huitie(Replytiezi tiezi) {
+        tieziDao.huitie(tiezi);
     }
 
     /**

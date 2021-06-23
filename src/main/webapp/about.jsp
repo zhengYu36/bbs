@@ -35,6 +35,25 @@
             return null;
         }
 
+        //回帖
+        function huitieSubmit() {
+            var comment = $('#comment').val();
+            var pid = $('#pidInfo').text();
+            $.ajax({
+                type: 'post',
+                url: '/tieziServlet?method=huitie',
+                data: {comment: comment, pid: pid},
+                success: function () {
+                    alert("回帖成功！");
+                    //刷新自己
+                    location.href = "/about.jsp";
+                },
+                error: function () {
+                    alert("失败！")
+                }
+            })
+        }
+
         $.ajax({
             type: 'get',
             url: '/tieziServlet',
@@ -43,10 +62,25 @@
             success: function (data) {
                 var jsonData = eval(data);
                 console.log(jsonData);
-                $("#title").append(jsonData[0]['title'])
+                $("#title").append(jsonData[0]['title']);
+                $("#pidInfo").append(jsonData[0]['uid']);
                 $("#leftcontainer").append("<h2 class=\"mainheading\"> " + jsonData[0]['uid'] + "</h2>"
-                    + "<article class=\"post\">" + jsonData[0]['tcontent'] + "</article>")
+                    + "<article class=\"post\">" + jsonData[0]['tcontent'] + "</article>");
 
+                //这里是回帖信息
+                var reply = jsonData[0]['replytiezis'];
+                if (reply != null) {
+                    for (var i = 0; i < reply.length; i++) {
+                        var info =
+                            "<div class=\"avatar\"><img src=\"http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=38\">" +
+                            " <p class=\"author\">" +
+                            " <span class=\"name\">" + reply[i]['uid'] +
+                            "</span> <time class=\"date\">" + ChangeDateFormat(reply[i]['tdate']) +
+                            "</time></p></div> <div class=\"comment\"><p>" + reply[i]['tcontent'] +
+                            "</p></div><div class=\"clear\"></div>";
+                        $("#replyList").append(info);
+                    }
+                }
             },
             error: function () {
                 alert("请转到首页打开一个帖子！")
@@ -75,37 +109,26 @@
 
             <%--回复列表--%>
             <div id="commentlist">
-            <article class="entry">
-                <div class="avatar">
-                    <img src="http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=38">
-                    <p class="author">
-                        <span class="name"><a href="#">Roshan Ravi</a></span>
-                        <time class="date">12 June 2010</time>
+                <article class="entry" id="replyList">
 
-                    </p>
-                </div>
-                <div class="comment">
-
-                    <p>Pellentesque vel erat ac elit ultrices dignissim a ut velit. Donec laoreet sem a turpis viverra ut aliquet odio interdum. Nunc consequat rhoncus vehicula. Cras iaculis enim in neque hendrerit eget laoreet mi adipiscing.</p>
-
-                </div>
-                <div class="clear"></div>
-            </article>
+                </article>
             </div>
 
 
-            <%--回复--%>
+            <%--回贴--%>
             <h3 id="respond">Leave a Reply</h3>
             <form action="#" method="post" id="commentform">
                 <p>
                     <small><strong>回复:</strong>写些你想写的！</small>
                 </p>
                 <p class="text-area">
-       <textarea name="comment" id="comment" cols="50" rows="10" tabindex="4">
+                    <!-- 隐藏uid 的值 -->
+                <div hidden id="pidInfo"></div>
+                <textarea name="comment" id="comment" cols="50" rows="10" tabindex="0">
        </textarea>
                 </p>
                 <p>
-                    <input type="button" id="submit" value="提交" class="submit">
+                    <input type="button" id="submit" value="提交" class="submit" onclick="huitieSubmit()">
                     <input name="comment_post_ID" value="1" type="hidden">
                 </p>
                 <div class="clear"></div>
@@ -115,9 +138,8 @@
 
         <section id="sidebar">
             <div id="sidebarwrap">
-                <h2>Categories</h2>
+                <h2>热点</h2>
                 <ul>
-
                     <li><a href="#">Web Design</a>(4)</li>
                     <li><a href="#">Graphics Design</a>(8)</li>
                     <li><a href="#">Computers</a>(12)</li>
@@ -126,26 +148,7 @@
                     <li><a href="#">Mathematics</a>(5)</li>
                     <li><a href="#">General News</a>(24)</li>
                     <li><a href="#">Music and Entertainment</a>(1)</li>
-
-
                 </ul>
-                <h2>Latest Posts</h2>
-
-                <ul>
-
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Graphics Design</a></li>
-                    <li><a href="#">Computers</a></li>
-                    <li><a href="#">Typography</a></li>
-                    <li><a href="#">Photogrphy</a></li>
-                    <li><a href="#">Mathematics</a></li>
-                    <li><a href="#">General News</a></li>
-                    <li><a href="#">Music and Entertainment</a></li>
-
-
-                </ul>
-
-
             </div>
         </section>
 
@@ -157,7 +160,7 @@
 <footer id="pagefooter">
     <div id="footerwrap">
         <div class="copyright">
-            2018 &copy; Chenjiale的论坛
+            Z121 的论坛
         </div>
     </div>
 </footer>

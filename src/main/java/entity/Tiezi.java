@@ -1,6 +1,7 @@
 package entity;
 
 import java.util.Date;
+import java.util.List;
 
 public class Tiezi {
     private int tid;
@@ -26,6 +27,17 @@ public class Tiezi {
 
     //0 不是精帖  1 是精帖
     private Integer status;
+
+    //回帖信息
+    private List<Replytiezi> replytiezis;
+
+    public List<Replytiezi> getReplytiezis() {
+        return replytiezis;
+    }
+
+    public void setReplytiezis(List<Replytiezi> replytiezis) {
+        this.replytiezis = replytiezis;
+    }
 
     public int getTid() {
         return tid;

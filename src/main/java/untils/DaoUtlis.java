@@ -33,7 +33,6 @@ public class DaoUtlis {
 
 
     //查询通用方法封装
-
     public <T> List<T> query(String sql, Object[] value, Class<T> tClass) {
         List<T> list = new ArrayList<T>();
         //获取连接

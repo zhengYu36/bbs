@@ -1,5 +1,6 @@
 package servlet;
 
+import entity.Replytiezi;
 import entity.Tiezi;
 import entity.Users;
 import jdk.nashorn.internal.parser.JSONParser;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 @WebServlet(name = "TieziServlet",urlPatterns = "/tieziServlet")
@@ -30,6 +32,8 @@ public class TieziServlet extends HttpServlet {
             fatie(request,response);
         }else if (method.equals("deleteTiezi")){
             deleteTiezi(request,response);
+        }else if(method.equals("huitie")){
+            huitie(request,response);
         }
     }
 
@@ -53,9 +57,7 @@ public class TieziServlet extends HttpServlet {
     public void fatie(HttpServletRequest request,HttpServletResponse response){
         String title = request.getParameter("title");
         String tcontent = request.getParameter("tcontent");
-
         int uid = 0;
-
         HttpSession session = request.getSession();
         List<Users> users = (List<Users>) session.getAttribute("userInfo");
         if(users != null && users.size() > 0){
@@ -69,6 +71,27 @@ public class TieziServlet extends HttpServlet {
         tiezi.setUid(uid);
         tieziService.fatie(tiezi);
     }
+
+    //回帖
+    public void huitie(HttpServletRequest request,HttpServletResponse response){
+        String comment = request.getParameter("comment").trim();
+        String pid = request.getParameter("pid");
+        //获取用户id
+        int uid = 0;
+        HttpSession session = request.getSession();
+        List<Users> users = (List<Users>) session.getAttribute("userInfo");
+        if(users != null && users.size() > 0){
+            Users users1 = users.get(0);
+            uid = users1.getUid();
+        }
+        Replytiezi tiezi = new Replytiezi();
+        tiezi.setTcontent(comment);
+        tiezi.setTdate(new Date());
+        tiezi.setPid(Integer.parseInt(pid));
+        tiezi.setUid(uid);
+        tieziService.huitie(tiezi);
+    }
+
     /**
      * 所有帖子展示页
      * @param request

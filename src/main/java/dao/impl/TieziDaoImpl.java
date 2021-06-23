@@ -36,6 +36,15 @@ public class TieziDaoImpl extends DaoUtlis implements TieziDao {
         return (tieziList!=null&&tieziList.size()>0?tieziList:null);
     }
 
+    @Override
+    public List<Replytiezi> replyTieziSingleShow(Tiezi tiezi) {
+        String sql = "select * from replytiezi where pid = ?";
+        Object[] num = {tiezi.getTid()};
+        List<Replytiezi> replytiezis = super.query(sql,num,Replytiezi.class);
+        return (replytiezis!=null&&replytiezis.size()>0?replytiezis:null);
+    }
+
+
     /**
      * 发帖
      * @param tiezi
@@ -45,6 +54,14 @@ public class TieziDaoImpl extends DaoUtlis implements TieziDao {
     public void fatie(Tiezi tiezi) {
         String sql = "INSERT INTO tiezi (title,tcontent,tdate,tnum1,tnum2,pid,uid,status) VALUES(?,?,?,?,?,?,?,?);";
         Object[] num = {tiezi.getTitle(),tiezi.getTcontent(),new Date(),0,0,0,tiezi.getUid(),0};
+        super.update(sql,num);
+    }
+
+
+    @Override
+    public void huitie(Replytiezi tiezi) {
+        String sql = "INSERT INTO replytiezi (tcontent,tdate,pid,uid) VALUES(?,?,?,?);";
+        Object[] num = {tiezi.getTcontent(),tiezi.getTdate(),tiezi.getPid(),tiezi.getUid()};
         super.update(sql,num);
     }
 

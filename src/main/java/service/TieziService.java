@@ -34,4 +34,6 @@ public interface TieziService {
     public void replytie(Replytiezi tiezi);
 
     public void jiajing(int id);
+
+    public void huitie(Replytiezi tiezi);
 }
