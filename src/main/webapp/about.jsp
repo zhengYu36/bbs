@@ -35,6 +35,24 @@
             return null;
         }
 
+        /*
+        初始化加载
+        如果当前用户登录  显示发帖框， 并隐藏登录
+        如果是游客记录   隐藏发帖款
+         */
+        $(function () {
+            let user = localStorage.getItem("uid");
+            if(user != null){
+                //隐藏登录
+                $("#siteinfoDev").hide();
+
+                //显示回到首页
+            }else{
+                $("#comment").hide();
+            }
+        });
+
+
         //回帖
         function huitieSubmit() {
             var comment = $('#comment').val();
@@ -46,7 +64,7 @@
                 success: function () {
                     alert("回帖成功！");
                     //刷新自己
-                    location.href = "/about.jsp";
+                    location.href = "/about.jsp?id="+pid;
                 },
                 error: function () {
                     alert("失败！")
@@ -63,8 +81,8 @@
                 var jsonData = eval(data);
                 console.log(jsonData);
                 $("#title").append(jsonData[0]['title']);
-                $("#pidInfo").append(jsonData[0]['uid']);
-                $("#leftcontainer").append("<h2 class=\"mainheading\"> " + jsonData[0]['uid'] + "</h2>"
+                $("#pidInfo").append(jsonData[0]['tid']);
+                $("#leftcontainer").append("<h2 class=\"mainheading\"> " + jsonData[0]['uname'] + "</h2>"
                     + "<article class=\"post\">" + jsonData[0]['tcontent'] + "</article>");
 
                 //这里是回帖信息
@@ -74,10 +92,10 @@
                         var info =
                             "<div class=\"avatar\"><img src=\"http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=38\">" +
                             " <p class=\"author\">" +
-                            " <span class=\"name\">" + reply[i]['uid'] +
+                            " <span class=\"name\">" + reply[i]['uname'] +
                             "</span> <time class=\"date\">" + ChangeDateFormat(reply[i]['tdate']) +
                             "</time></p></div> <div class=\"comment\"><p>" + reply[i]['tcontent'] +
-                            "</p></div><div class=\"clear\"></div>";
+                            "<hr /></p></div><div class=\"clear\"></div>";
                         $("#replyList").append(info);
                     }
                 }
@@ -92,9 +110,19 @@
 <body>
 <div id="bodywrap">
     <section id="pagetop">
-        <p id="siteinfo">
-            <a href="login.jsp">登录</a> | <a href="register.jsp">注册</a>
-        </p>
+        <div id="siteinfoDev">
+            <p id="siteinfo">
+                <a href="login.jsp">登录</a> | <a href="register.jsp">注册</a>
+            </p>
+        </div>
+
+        <p></p>
+        <div id="indexInfoDev">
+            <p id="indexInfo">
+                <a href="index.jsp">首页</a>
+            </p>
+        </div>
+
     </section>
     <header id="pageheader">
         <h1 id="title">
@@ -110,7 +138,6 @@
             <%--回复列表--%>
             <div id="commentlist">
                 <article class="entry" id="replyList">
-
                 </article>
             </div>
 
@@ -124,8 +151,8 @@
                 <p class="text-area">
                     <!-- 隐藏uid 的值 -->
                 <div hidden id="pidInfo"></div>
-                <textarea name="comment" id="comment" cols="50" rows="10" tabindex="0">
-       </textarea>
+                <textarea name="comment" id="comment" cols="50" rows="10" tabindex="0" />
+                </textarea>
                 </p>
                 <p>
                     <input type="button" id="submit" value="提交" class="submit" onclick="huitieSubmit()">

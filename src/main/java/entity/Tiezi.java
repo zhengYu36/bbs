@@ -24,12 +24,21 @@ public class Tiezi {
 
     //用户id
     private Integer uid;
+    private String uname;
 
     //0 不是精帖  1 是精帖
     private Integer status;
 
     //回帖信息
     private List<Replytiezi> replytiezis;
+
+    public String getUname() {
+        return uname;
+    }
+
+    public void setUname(String uname) {
+        this.uname = uname;
+    }
 
     public List<Replytiezi> getReplytiezis() {
         return replytiezis;

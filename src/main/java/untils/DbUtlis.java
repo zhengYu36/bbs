@@ -9,7 +9,7 @@ public class DbUtlis {
             Class.forName("com.mysql.jdbc.Driver");
             String url = "jdbc:mysql://localhost:3306/bbs?useUnicode=true&characterEncoding=utf-8";
             String user = "root";
-            String password = "root";
+            String password = "123456";
             conn = DriverManager.getConnection(url, user, password);
             if (conn!=null){
                 System.out.println("数据库连接成功");

@@ -12,6 +12,13 @@ public interface TieziDao {
      */
     public List<Tiezi> TieziShow();
 
+    public List<Tiezi> TieziShowPage(String sql);
+
+    //执行sql
+    public long tieziTotal(String sql);
+
+    public List<Tiezi> hottie();
+
     /**
      * 查询单个帖子
      * @return

@@ -26,7 +26,7 @@
                 data:{title:title,tcontent:tcontent},
                 success:function () {
                     alert("发帖成功！")
-                    location.href = "/index.jsp";
+                    location.href = "/fatie.jsp";
                 },
                 error:function () {
                   alert("失败！")

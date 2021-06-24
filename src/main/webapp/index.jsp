@@ -28,25 +28,35 @@
             return date.getFullYear() + "-" + month + "-" + currentDate;
         }
         $(function () {
+            //普通帖子
+            let pageInfo = 1;
             $.ajax({
                 type: 'post',
-                url: '/tieziServlet?method=tieziShow',
+                url: '/tieziServlet?method=tieziShow&currentPage='+pageInfo,
                 contentType: 'application/json;charset=utf-8',
                 success: function (data) {
-                    var jsonData = eval(data);
-                    for (var i = 0;i < data.length;i++){
+                    var dataInfo = eval(data);
+                    var jsonData = dataInfo[0]['pt'];
+                    var hotData = dataInfo[0]['hot'];
+                    //普通帖子
+                    for (var i = 0;i < jsonData.length;i++){
                         $("#tiezi").append("<header><h3><a href='about.jsp?id="+jsonData[i]['tid']+"'>"+jsonData[i]['title']+"</a></h3>"
-                            +"<p class=\"postinfo\">"+jsonData[i]['uid']+"<time>&nbsp;&nbsp;&nbsp;&nbsp;"
+                            +"<p class=\"postinfo\">"+jsonData[i]['uname']+"<time>&nbsp;&nbsp;&nbsp;&nbsp;"
                             +ChangeDateFormat(jsonData[i]['tdate'])+"</time></p></header>"
                             +"<p>"+jsonData[i]['tcontent'].substr(0,100)+"……"+"</p>"
                             +"<footer><span class=\"author\">浏览人数&nbsp;&nbsp;&nbsp;"+jsonData[i]['tnum1']+"</span>"
                             +"<span>回帖人数&nbsp;&nbsp;&nbsp;"+jsonData[i]['tnum2']+"</span></footer><div class=\"clear\"></div>"
                         )
                     }
-                }
-            })
-        })
 
+                    //热帖
+                    for (var i = 0;i < hotData.length;i++){
+                        var aa = "<li><a href='about.jsp?id="+hotData[i]['tid']+"'>"+hotData[i]['title']+"</a></li>";
+                        $("#hotList").append(aa);
+                    }
+                }
+            });
+        });
     </script>
 </head>
 
@@ -111,16 +121,8 @@
 
                 <!-- 这里是加精的帖子，是管理员来分配的 -->
                 <h2>热点</h2>
-                <ul>
-                    <li><a href="#">加精贴1</a></li>
-                    <li><a href="#">加精贴2</a></li>
-                    <li><a href="#">加精贴3</a></li>
-                    <li><a href="#">加精贴1</a></li>
-                    <li><a href="#">加精贴2</a></li>
-                    <li><a href="#">加精贴3</a></li>
-
+                <ul id="hotList">
                 </ul>
-
             </div>
         </section>
 

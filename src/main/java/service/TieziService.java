@@ -2,16 +2,23 @@ package service;
 
 import entity.Replytiezi;
 import entity.Tiezi;
+import entity.vo.TieziVo;
 
 import java.util.List;
 
 public interface TieziService {
+
+    public TieziVo allTie(String currentPage);
+
     /**
      * 帖子查询展示
      * @return
      */
     public List<Tiezi> tieziShow();
 
+
+    //热帖
+    public List<Tiezi> hottie();
     /**
      * 帖子单独展示页
      * @return

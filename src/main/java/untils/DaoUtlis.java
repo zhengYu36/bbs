@@ -40,6 +40,9 @@ public class DaoUtlis {
         //创建pas对象
         try {
             //检查sql语句
+            System.out.println("sql ----------------start-------------");
+            System.out.println(sql);
+            System.out.println("sql ----------------end-------------");
             pstmt = conn.prepareStatement(sql);
             //sql语句有几个预处理数据
             int count = pstmt.getParameterMetaData().getParameterCount();

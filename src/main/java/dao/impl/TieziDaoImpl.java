@@ -4,6 +4,7 @@ import dao.TieziDao;
 import entity.Replytiezi;
 import entity.Tiezi;
 import untils.DaoUtlis;
+import untils.SqlPageUtil;
 
 import javax.rmi.CORBA.Tie;
 import java.util.Date;
@@ -16,10 +17,34 @@ public class TieziDaoImpl extends DaoUtlis implements TieziDao {
      */
     @Override
     public List<Tiezi> TieziShow() {
-        String sql = "select * from tiezi";
+        String sql = "select * from tiezi where status = 0";
+        //查询数据
         List<Tiezi> list = super.query(sql,null,Tiezi.class);
         return (list!=null&&list.size()>0?list:null);
     }
+
+    @Override
+    public List<Tiezi> TieziShowPage(String sql) {
+
+        //查询数据
+        List<Tiezi> list = super.query(sql,null,Tiezi.class);
+        return (list!=null&&list.size()>0?list:null);
+    }
+
+    @Override
+    public long tieziTotal(String sql) {
+        List<Tiezi> list = super.query(sql, null, Tiezi.class);
+        return (list!=null&&list.size()>0?list.size():0);
+    }
+
+    //查询热帖
+    @Override
+    public List<Tiezi> hottie() {
+        String sql = "select * from tiezi where status = 1 limit 9";
+        List<Tiezi> list = super.query(sql,null,Tiezi.class);
+        return (list!=null&&list.size()>0?list:null);
+    }
+
 
     /**
      * 查询单个帖子
@@ -38,7 +63,7 @@ public class TieziDaoImpl extends DaoUtlis implements TieziDao {
 
     @Override
     public List<Replytiezi> replyTieziSingleShow(Tiezi tiezi) {
-        String sql = "select * from replytiezi where pid = ?";
+        String sql = "select t1.*,t2.uname from replytiezi t1 left join users t2 on t1.uid = t2.uid where t1.pid = ?";
         Object[] num = {tiezi.getTid()};
         List<Replytiezi> replytiezis = super.query(sql,num,Replytiezi.class);
         return (replytiezis!=null&&replytiezis.size()>0?replytiezis:null);

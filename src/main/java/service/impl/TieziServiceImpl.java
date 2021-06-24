@@ -1,16 +1,55 @@
 package service.impl;
 
 import dao.TieziDao;
+import dao.UsersDao;
 import dao.impl.TieziDaoImpl;
+import dao.impl.UsersDaoImpl;
 import entity.Replytiezi;
 import entity.Tiezi;
+import entity.Users;
+import entity.vo.TieziVo;
 import service.TieziService;
+import untils.PageInfoUtils;
+import untils.SqlPageUtil;
 
 import javax.rmi.CORBA.Tie;
 import java.util.List;
 
 public class TieziServiceImpl implements TieziService {
     TieziDao tieziDao = new TieziDaoImpl();
+    UsersDao usersDao = new UsersDaoImpl();
+
+    @Override
+    public TieziVo allTie(String currentPage) {
+
+        TieziVo tv = new TieziVo();
+
+        //普通帖子需要进行分页
+        String sql = "select t1.*,t2.uname from tiezi t1 left join users t2 on t1.uid = t2.uid where status = 0";
+        //总条数
+        //String totalNumSql = SqlPageUtil.countSql(sql);
+        long totalNum = tieziDao.tieziTotal(sql);
+
+        //分页数据
+        PageInfoUtils pageInfoUtils = new PageInfoUtils();
+
+        //总页数
+        long totalPage = SqlPageUtil.pageCount(pageInfoUtils.getPageSize(), totalNum);
+        pageInfoUtils.setPageCount(totalPage);
+        pageInfoUtils.setCurrentPage(Integer.parseInt(currentPage));
+
+        //分页sql
+        String pageSql = SqlPageUtil.pageSql(SqlPageUtil.Dialect.MySql, sql, pageInfoUtils.getPageSize(), Integer.parseInt(currentPage));
+        List<Tiezi> tiezis = tieziDao.TieziShowPage(pageSql);
+        pageInfoUtils.setData(tiezis);
+
+        tv.setPageInfo(pageInfoUtils);
+
+        //普通帖子
+        tv.setPt(tiezis);
+        tv.setHot(tieziDao.hottie());
+        return tv;
+    }
 
     /**
      * 查询所有帖子
@@ -18,7 +57,13 @@ public class TieziServiceImpl implements TieziService {
      */
     @Override
     public List<Tiezi> tieziShow() {
-        return tieziDao.TieziShow();
+        List<Tiezi> tiezis = tieziDao.TieziShow();
+        return tiezis;
+    }
+
+    @Override
+    public List<Tiezi> hottie() {
+        return tieziDao.hottie();
     }
 
     /**
@@ -28,10 +73,17 @@ public class TieziServiceImpl implements TieziService {
      */
     @Override
     public List<Tiezi> TieziSingleShow(Tiezi tiezi) {
+        //根据id获取的帖子肯定只有一个
         List<Tiezi> result = tieziDao.TieziSingleShow(tiezi);
         if(result != null && result.size() >0){
+
+            Tiezi tiezi1 = result.get(0);
+            List<Users> users = usersDao.editUser(tiezi1.getUid());
+            //设置用户名称
+            tiezi1.setUname(users.get(0).getUname());
+
             //获取帖子的回帖信息
-            result.get(0).setReplytiezis(tieziDao.replyTieziSingleShow(tiezi));
+            tiezi1.setReplytiezis(tieziDao.replyTieziSingleShow(tiezi));
         }
         return result;
     }

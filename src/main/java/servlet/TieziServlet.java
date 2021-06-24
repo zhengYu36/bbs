@@ -3,8 +3,10 @@ package servlet;
 import entity.Replytiezi;
 import entity.Tiezi;
 import entity.Users;
+import entity.vo.TieziVo;
 import jdk.nashorn.internal.parser.JSONParser;
 import net.sf.json.JSONArray;
+import org.apache.commons.lang.StringUtils;
 import service.TieziService;
 import service.impl.TieziServiceImpl;
 
@@ -34,6 +36,8 @@ public class TieziServlet extends HttpServlet {
             deleteTiezi(request,response);
         }else if(method.equals("huitie")){
             huitie(request,response);
+        }else if(method.equals("hottie")){
+            hottie(request,response);
         }
     }
 
@@ -93,13 +97,32 @@ public class TieziServlet extends HttpServlet {
     }
 
     /**
-     * 所有帖子展示页
+     * 显示普通帖子和热帖
      * @param request
      * @param response
      * @throws IOException
      */
     public void tieziShow(HttpServletRequest request,HttpServletResponse response) throws IOException {
-        List<Tiezi> tieziList = tieziService.tieziShow();
+
+        //当前页数
+        String currentPage = "1";
+        if(request != null){
+             currentPage = request.getParameter("currentPage").trim();
+            if(StringUtils.isEmpty(currentPage)){
+                currentPage = "1";
+            }
+        }
+
+        TieziVo tieziList = tieziService.allTie(currentPage);
+        if (tieziList != null) {
+            JSONArray jsonArray = JSONArray.fromObject(tieziList);
+            response.getWriter().print(jsonArray);
+        }
+    }
+
+    //热帖
+    public void hottie(HttpServletRequest request,HttpServletResponse response) throws IOException {
+        List<Tiezi> tieziList = tieziService.hottie();
         if (tieziList != null) {
             JSONArray jsonArray = JSONArray.fromObject(tieziList);
             response.getWriter().print(jsonArray);

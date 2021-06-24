@@ -28,25 +28,35 @@
             return date.getFullYear() + "-" + month + "-" + currentDate;
         }
         $(function () {
+            //普通帖子
+            let pageInfo = 1;
             $.ajax({
                 type: 'post',
-                url: '/tieziServlet?method=tieziShow',
+                url: '/tieziServlet?method=tieziShow&currentPage='+pageInfo,
                 contentType: 'application/json;charset=utf-8',
                 success: function (data) {
-                    var jsonData = eval(data);
-                        for (var i = 0;i < data.length;i++){
-                            $("#tiezi").append("<header><h3><a href='about.jsp?id="+jsonData[i]['tid']+"'>"+jsonData[i]['title']+"</a></h3>"
-                                +"<p class=\"postinfo\">"+jsonData[i]['uid']+"<time>&nbsp;&nbsp;&nbsp;&nbsp;"
-                                +ChangeDateFormat(jsonData[i]['tdate'])+"</time></p></header>"
-                                +"<p>"+jsonData[i]['tcontent'].substr(0,100)+"……"+"</p>"
-                                +"<footer><span class=\"author\">浏览人数&nbsp;&nbsp;&nbsp;"+jsonData[i]['tnum1']+"</span>"
-                                +"<span>回帖人数&nbsp;&nbsp;&nbsp;"+jsonData[i]['tnum2']+"</span></footer><div class=\"clear\"></div>"
-                            )
-                        }
-                }
-            })
-        })
+                    var dataInfo = eval(data);
+                    var jsonData = dataInfo[0]['pt'];
+                    var hotData = dataInfo[0]['hot'];
+                    //普通帖子
+                    for (var i = 0;i < jsonData.length;i++){
+                        $("#tiezi").append("<header><h3><a href='about.jsp?id="+jsonData[i]['tid']+"'>"+jsonData[i]['title']+"</a></h3>"
+                            +"<p class=\"postinfo\">"+jsonData[i]['uname']+"<time>&nbsp;&nbsp;&nbsp;&nbsp;"
+                            +ChangeDateFormat(jsonData[i]['tdate'])+"</time></p></header>"
+                            +"<p>"+jsonData[i]['tcontent'].substr(0,100)+"……"+"</p>"
+                            +"<footer><span class=\"author\">浏览人数&nbsp;&nbsp;&nbsp;"+jsonData[i]['tnum1']+"</span>"
+                            +"<span>回帖人数&nbsp;&nbsp;&nbsp;"+jsonData[i]['tnum2']+"</span></footer><div class=\"clear\"></div>"
+                        )
+                    }
 
+                    //热帖
+                    for (var i = 0;i < hotData.length;i++){
+                        var aa = "<li><a href='about.jsp?id="+hotData[i]['tid']+"'>"+hotData[i]['title']+"</a></li>";
+                        $("#hotList").append(aa);
+                    }
+                }
+            });
+        });
     </script>
 </head>
 
@@ -59,7 +69,7 @@
     </section>
     <header id="pageheader">
         <h1>
-            Welcome
+            Welcome BBS 论坛
         </h1>
     </header>
     <div id="contents">
@@ -68,8 +78,7 @@
                 <h2 class="ftheading">Featured</h2>
                 <div class="ftwrap">
                     <div class="ftimg">
-
-                        <img src="images/img1.jpg" width="204" height="128" alt="img1"></div>
+                        <img src="images/img3.jpg" width="204" height="128" alt="img3"></div>
                     <div class="fttxt">
                         <h3>Featured Content</h3>
                         <p>Lorema psum dolor sit amet,
@@ -90,6 +99,7 @@
                     <div class="clear"></div>
                 </article>
 
+                <!-- 页数，这里后面是从后台来获取-->
                 <div class="wp-pagenavi">
                     <span class="current">1</span><a href="/page/2/" title="2">2</a><a href="/page/3/" title="3">3</a><a
                         href="/page/4/" title="4">4</a><a href="/page/5/" title="5">5</a><a href="/page/6/"
@@ -100,6 +110,8 @@
                 <div class="clear"></div>
             </div>
         </section>
+
+        <!-- 右边论坛帖子加精 -->
         <section id="sidebar">
             <div id="sidebarwrap">
                 <h2>About SilverBlog</h2>
@@ -107,29 +119,9 @@
                     any way you want without any restrictions. A link back to this website will always be appreciated.
                     <a href="#">Read More</a></p>
 
+                <!-- 这里是加精的帖子，是管理员来分配的 -->
                 <h2>热点</h2>
-                <ul>
-                    <li><a href="#">Web Design</a>(4)</li>
-                    <li><a href="#">Graphics Design</a>(8)</li>
-                    <li><a href="#">Computers</a>(12)</li>
-                    <li><a href="#">Typography</a>(3)</li>
-                    <li><a href="#">Photogrphy</a>(4)</li>
-                    <li><a href="#">Mathematics</a>(5)</li>
-                    <li><a href="#">General News</a>(24)</li>
-                    <li><a href="#">Music and Entertainment</a>(1)</li>
-                </ul>
-
-                <h2>资讯</h2>
-                <ul>
-
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Graphics Design</a></li>
-                    <li><a href="#">Computers</a></li>
-                    <li><a href="#">Typography</a></li>
-                    <li><a href="#">Photogrphy</a></li>
-                    <li><a href="#">Mathematics</a></li>
-                    <li><a href="#">General News</a></li>
-                    <li><a href="#">Music and Entertainment</a></li>
+                <ul id="hotList">
                 </ul>
             </div>
         </section>

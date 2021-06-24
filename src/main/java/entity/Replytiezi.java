@@ -17,6 +17,15 @@ public class Replytiezi {
 
     //用户id
     private Integer uid;
+    private String uname;
+
+    public String getUname() {
+        return uname;
+    }
+
+    public void setUname(String uname) {
+        this.uname = uname;
+    }
 
     public Integer getUid() {
         return uid;
