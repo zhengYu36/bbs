@@ -36,6 +36,7 @@ public class UsersServlet extends HttpServlet {
         users.setUname(request.getParameter("uname"));
         users.setUpwd(request.getParameter("upwd"));
         users.setUemail(request.getParameter("uinfo"));
+        users.setUtype(request.getParameter("power"));
         usersService.addUser(users);
         response.sendRedirect(request.getContextPath()+"/admin/userManager.html");
     }
@@ -62,6 +63,7 @@ public class UsersServlet extends HttpServlet {
         users.setUname(request.getParameter("u_username"));
         users.setUpwd(request.getParameter("u_pwd"));
         users.setUemail(request.getParameter("u_info"));
+        users.setUtype(request.getParameter("power"));
         usersService.updateUser(users);
         response.sendRedirect(request.getContextPath()+"/admin/userManager.html");
 

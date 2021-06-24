@@ -38,8 +38,8 @@ public class UsersDaoImpl extends DaoUtlis implements UsersDao {
      */
     @Override
     public void updateUser(Users users) {
-        String sql = "UPDATE users set uname = ?,upwd = ?,uemail = ? where uid = ?";
-        Object[] num = {users.getUname(),users.getUpwd(),users.getUemail(),users.getUid()};
+        String sql = "UPDATE users set uname = ?,upwd = ?,uemail = ?,utype = ? where uid = ?";
+        Object[] num = {users.getUname(),users.getUpwd(),users.getUemail(),users.getUtype(),users.getUid()};
         super.update(sql,num);
     }
 
@@ -52,8 +52,8 @@ public class UsersDaoImpl extends DaoUtlis implements UsersDao {
 
     @Override
     public void addUser(Users users) {
-        String sql = "insert into users(uname,upwd,uemail) values(?,?,?)";
-        Object[] num = {users.getUname(),users.getUpwd(),users.getUemail()};
+        String sql = "insert into users(uname,upwd,uquestion,uanswer,uemail,utype) values(?,?,?,?,?,?)";
+        Object[] num = {users.getUname(),users.getUpwd(),0,1,users.getUemail(),users.getUtype()};
         super.update(sql,num);
     }
 }
