@@ -11,8 +11,8 @@ public class PageInfoUtils<T> {
     //当前页数
     private long currentPage;
 
-    //每页大小默认为9
-    private int pageSize = 6;
+    //每页大小默认为6
+    private int pageSize = 3;
 
     //分页数据
     private List<T> data = new ArrayList<>();

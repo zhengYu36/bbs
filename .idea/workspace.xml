@@ -9,23 +9,54 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49aa28ff-0576-456f-a8d2-0bb92e6aaa40" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TieziDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TieziDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/TieziDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/TieziDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/TieziService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/TieziService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/TieziServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/TieziServiceImpl.java" afterDir="false" />
+    <list default="true" id="49aa28ff-0576-456f-a8d2-0bb92e6aaa40" name="Default" comment="新增分页查询操作">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/TieziServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/TieziServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/tieziManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/tieziManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlet/TieziServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/untils/PageInfoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/untils/PageInfoUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/index.jsp" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
+    <list id="e0e2bca7-661a-42e2-83c8-efa2bb4f59ae" name="ignore" comment="忽略">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/bbs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/bbs/fatie.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/85651c19-30f9-4042-8ebf-254824ee7807.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/85651c19-30f9-4042-8ebf-254824ee7807.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rebel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rebel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/dao/TieziDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/dao/TieziDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/dao/impl/TieziDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/dao/impl/TieziDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/entity/Tiezi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/entity/Tiezi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/entity/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/entity/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/rebel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/rebel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/service/TieziService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/service/TieziService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/service/impl/TieziServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/service/impl/TieziServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/servlet/TieziServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/servlet/TieziServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/untils/DaoUtlis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/untils/DaoUtlis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/untils/DbUtlis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/untils/DbUtlis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/tieziManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/admin/tieziManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/userManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/admin/userManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/TieziDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/TieziDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/impl/TieziDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/impl/TieziDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/Tiezi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/Tiezi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rebel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rebel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/TieziService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/TieziService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/TieziServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/TieziServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/TieziServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlet/TieziServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/untils/DaoUtlis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/untils/DaoUtlis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/untils/DbUtlis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/untils/DbUtlis.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -67,37 +98,6 @@
   <component name="ExportToHTMLSettings">
     <option name="OUTPUT_DIRECTORY" value="E:\Program Files\JetBrains\IntelliJ IDEA 2018.1.2\workspease\bbs\exportToHTML" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TieziServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/servlet/TieziServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="35" column="32" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tieziManager.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/tieziManager.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="90" column="38" lean-forward="true" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TieziDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/TieziDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -107,87 +107,19 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>pas</find>
-      <find>邮箱</find>
-      <find>form</find>
-      <find>submit-w3l</find>
-      <find>47</find>
-      <find>submit</find>
-    </findStrings>
-  </component>
+  <component name="GOROOT" path="C:\Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/html/user/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/jquery.js" />
-        <option value="$PROJECT_DIR$/src/main/java/service/impl/LoginServletImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/font-awesome.min.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/register.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/loginStyle.css" />
-        <option value="$PROJECT_DIR$/src/main/java/service/impl/LoginServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/register.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/asf.jsp" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/service/LoginService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/LoginDao.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/about.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/styles.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/license.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/contact.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/contact.jsp" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/src/js/app.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/index.1.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/page.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/datas/navbar1.json" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/login.html" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/impl/LoginDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/Tiezi.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/about.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/impl/UsersDao.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/table.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/datas/nav.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/userManager.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/untils/DbUtlis.java" />
-        <option value="$PROJECT_DIR$/src/main/java/untils/DaoUtlis.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/UsersService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/impl/UsersServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/UsersDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/impl/UsersDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlet/UsersServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/userManager.html" />
-        <option value="$PROJECT_DIR$/src/main/java/servlet/TieziServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/TieziService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/TieziDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/impl/TieziServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/impl/TieziDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/tieziManager.html" />
-      </list>
-    </option>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
-  </component>
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -196,205 +128,89 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="bbs Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
-  </component>
+  <component name="ProjectId" id="1uILZQXmrSjudxHrr9NoPF26uJH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="bbs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bbs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bbs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bbs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bbs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bbs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bbs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bbs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bbs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bbs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bbs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bbs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bbs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bbs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bbs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bbs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bbs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bbs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bbs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bbs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bbs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bbs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="GO_FMT" value="true" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="MyBatisLogPluginparameters" value="Parameters:" />
+    <property name="MyBatisLogPluginpreparing" value="Preparing:" />
+    <property name="MyBatisLogPluginrunning" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="servlet" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="untils" />
+      <recent name="entity" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\bbsMaster\github\bbs\src\main\webapp" />
       <recent name="E:\Program Files\JetBrains\IntelliJ IDEA 2018.1.2\workspease\bbs\src\main\webapp\admin" />
       <recent name="E:\Program Files\JetBrains\IntelliJ IDEA 2018.1.2\workspease\bbs\src\main\webapp" />
       <recent name="E:\Program Files\JetBrains\IntelliJ IDEA 2018.1.2\workspease\bbs\src\main\webapp\admin\css" />
       <recent name="E:\Program Files\JetBrains\IntelliJ IDEA 2018.1.2\workspease\bbs\src\main\webapp\admin\css\modules" />
-      <recent name="E:\Program Files\JetBrains\IntelliJ IDEA 2018.1.2\workspease\bbs\src\main\webapp\css" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
+    <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.36" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER" value="false" />
-      <option name="UPDATING_POLICY" value="restart-server" />
+    <configuration name="bbs" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.6" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
         <artifact name="bbs:war exploded">
           <settings>
@@ -404,12 +220,14 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_bbs" />
+        <option name="HTTP_PORT" value="8088" />
+        <option name="JNDI_PORT" value="1899" />
       </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="52806" />
       </RunnerSettings>
@@ -491,12 +309,36 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-      <method>
+      <method v="2">
+        <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="bbs:war exploded" />
         </option>
       </method>
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.159153" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -504,6 +346,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="49aa28ff-0576-456f-a8d2-0bb92e6aaa40" name="Default" comment="" />
+      <changelist id="e0e2bca7-661a-42e2-83c8-efa2bb4f59ae" name="ignore" comment="忽略" />
       <created>1527839177337</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -518,512 +361,179 @@
       <workItem from="1528244721168" duration="9709000" />
       <workItem from="1528258339133" duration="2665000" />
       <workItem from="1528264162426" duration="9323000" />
+      <workItem from="1624348214223" duration="21524000" />
+      <workItem from="1624439813871" duration="934000" />
+      <workItem from="1624497996892" duration="6797000" />
     </task>
+    <task id="LOCAL-00001" summary="1.新增回帖页面&#10;2.帖子加精&#10;3.新增注销">
+      <created>1624353755762</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624353755763</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1.回帖消息的操作">
+      <created>1624430355468</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1624430355468</updated>
+    </task>
+    <task id="LOCAL-00003" summary="新增分页查询操作">
+      <created>1624506204533</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1624506204534</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131768000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Application Servers" order="0" weight="0.3289689" />
-      <window_info anchor="bottom" id="JRebel Console" order="8" sideWeight="0.50075644" side_tool="true" weight="0.26841244" />
-      <window_info anchor="right" id="Maven Projects" order="0" weight="0.32980332" />
-      <window_info anchor="bottom" id="JRebel Executor" order="7" sideWeight="0.49924356" weight="0.19312602" />
-      <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="8" />
-      <window_info id="Designer" order="0" />
-      <window_info anchor="right" id="Database" order="2" weight="0.2375189" />
-      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info id="UI Designer" order="3" />
-      <window_info anchor="bottom" id="Debug" order="14" sideWeight="0.49924356" weight="0.35188216" />
-      <window_info anchor="bottom" id="TODO" order="17" />
-      <window_info anchor="bottom" id="Messages" order="1" weight="0.21440262" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="Java Enterprise" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="bottom" id="Run" order="11" sideWeight="0.49924356" weight="0.5744681" />
-      <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.32569557" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.7626841" weight="0.23373677" />
-      <window_info id="Web" order="5" sideWeight="0.23731588" side_tool="true" weight="0.22692889" />
-      <window_info id="JRebel" order="1" sideWeight="0.46851385" side_tool="true" weight="0.21785174" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="16" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.3289689" />
-      <window_info anchor="bottom" id="Database Console" order="5" weight="0.32952693" />
-      <window_info anchor="bottom" id="Cvs" order="15" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="9" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="10" weight="0.32569557" />
-    </layout>
-    <layout-to-restore>
-      <window_info anchor="bottom" id="Application Servers" order="0" weight="0.3289689" />
-      <window_info id="Designer" order="0" />
-      <window_info anchor="bottom" id="Database Console" order="5" weight="0.32952693" />
-      <window_info anchor="right" id="Palette" order="5" />
-      <window_info id="JRebel" order="1" sideWeight="0.46851385" side_tool="true" weight="0.21785174" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="Run" order="11" sideWeight="0.49924356" weight="0.5744681" />
-      <window_info anchor="bottom" id="Cvs" order="15" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.32569557" />
-      <window_info id="Capture Tool" order="8" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.3289689" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="1" weight="0.21440262" />
-      <window_info anchor="bottom" id="TODO" order="17" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Java Enterprise" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="0" weight="0.32980332" />
-      <window_info anchor="bottom" id="Find" order="10" weight="0.32569557" />
-      <window_info anchor="bottom" id="JRebel Executor" order="7" sideWeight="0.49924356" visible="true" weight="0.19312602" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.7626841" visible="true" weight="0.23373677" />
-      <window_info anchor="bottom" id="JRebel Console" order="8" sideWeight="0.50075644" side_tool="true" weight="0.26841244" />
-      <window_info anchor="right" id="Database" order="2" weight="0.2375189" />
-      <window_info anchor="bottom" id="Message" order="9" />
-      <window_info id="Web" order="5" sideWeight="0.23731588" side_tool="true" weight="0.22692889" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="16" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="14" sideWeight="0.49924356" weight="0.35188216" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="49" />
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/UsersServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/userManager.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/UsersServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="40" column="121" selection-start-line="40" selection-start-column="121" selection-end-line="40" selection-end-column="121" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="65" column="50" lean-forward="true" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/cop.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/index.1.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/README.md" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/datas/navbar1.json" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/datas/onelevel1.json" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/common.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="186" selection-start-line="186" selection-end-line="186" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/loginStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="265" column="19" lean-forward="true" selection-start-line="265" selection-start-column="19" selection-end-line="265" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/LoginDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/LoginDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/LoginServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Tiezi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/login.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/UsersDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/css/app.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6120" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/datas/nav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/untils/DbUtlis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/untils/DaoUtlis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://85651c19-30f9-4042-8ebf-254824ee7807/schema/bbs/table/tiezi">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6840" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-749">
-          <caret line="72" column="55" lean-forward="true" selection-start-line="72" selection-start-column="55" selection-end-line="72" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/contact.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3793" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/about.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1050">
-          <caret line="40" column="37" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="109" column="43" selection-start-line="109" selection-start-column="42" selection-end-line="109" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms2.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="135" column="18" selection-start-line="135" selection-start-column="18" selection-end-line="135" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/UsersDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/UsersService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://85651c19-30f9-4042-8ebf-254824ee7807/schema/bbs/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/UsersServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#902#903#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/main.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="39" column="49" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/userManager.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="137" column="10" lean-forward="true" selection-start-line="124" selection-start-column="8" selection-end-line="137" selection-end-column="10" />
-          <folding>
-            <element signature="n#div#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#1;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/UsersServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="50" selection-start-line="50" selection-end-line="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/TieziService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/TieziDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/TieziServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-          <folding>
-            <element signature="e#847#848#0" expanded="true" />
-            <element signature="e#887#888#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/UsersDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/TieziDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/TieziServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/tieziManager.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="90" column="38" lean-forward="true" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1.新增回帖页面&#10;2.帖子加精&#10;3.新增注销" />
+    <MESSAGE value="1.回帖消息的操作" />
+    <MESSAGE value="回帖功能bug修复" />
+    <MESSAGE value="新增分页查询操作" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增分页查询操作" />
   </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>bbs:war</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Web (bbs)|Web</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>bbs</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: junit:junit:4.11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="WindowStateProjectService">
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1624504426379">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1624504426379" />
+    <state x="574" y="89" key="#com.intellij.ide.util.MemberChooser" timestamp="1624503355134">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="89" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1624503355134" />
+    <state x="561" y="284" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1624431728548">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="561" y="284" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1624431728548" />
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1624352005361">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1624352005361" />
+    <state width="441" height="618" key="DebuggerActiveHint" timestamp="1624505258390">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="441" height="618" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1624505258390" />
+    <state width="1230" height="275" key="GridCell.Tab.0.bottom" timestamp="1624510220889">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1230" height="275" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624510220889" />
+    <state width="1230" height="275" key="GridCell.Tab.0.center" timestamp="1624510220889">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1230" height="275" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1624510220889" />
+    <state width="1230" height="275" key="GridCell.Tab.0.left" timestamp="1624510220889">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1230" height="275" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1624510220889" />
+    <state width="1230" height="275" key="GridCell.Tab.0.right" timestamp="1624510220889">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1230" height="275" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1624510220889" />
+    <state width="1230" height="275" key="GridCell.Tab.1.bottom" timestamp="1624510220890">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1230" height="275" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624510220890" />
+    <state width="1230" height="275" key="GridCell.Tab.1.center" timestamp="1624510220890">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1230" height="275" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1624510220890" />
+    <state width="1230" height="275" key="GridCell.Tab.1.left" timestamp="1624510220889">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1230" height="275" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1624510220889" />
+    <state width="1230" height="275" key="GridCell.Tab.1.right" timestamp="1624510220890">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1230" height="275" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1624510220890" />
+    <state width="1230" height="249" key="GridCell.Tab.18.bottom" timestamp="1624504083731">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1230" height="249" key="GridCell.Tab.18.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624504083731" />
+    <state width="1230" height="249" key="GridCell.Tab.18.center" timestamp="1624504083731">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1230" height="249" key="GridCell.Tab.18.center/0.0.1536.824@0.0.1536.824" timestamp="1624504083731" />
+    <state width="1230" height="249" key="GridCell.Tab.18.left" timestamp="1624504083731">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1230" height="249" key="GridCell.Tab.18.left/0.0.1536.824@0.0.1536.824" timestamp="1624504083731" />
+    <state width="1230" height="249" key="GridCell.Tab.18.right" timestamp="1624504083731">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1230" height="249" key="GridCell.Tab.18.right/0.0.1536.824@0.0.1536.824" timestamp="1624504083731" />
+    <state width="1230" height="275" key="GridCell.Tab.2.bottom" timestamp="1624510220890">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1230" height="275" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624510220890" />
+    <state width="1230" height="275" key="GridCell.Tab.2.center" timestamp="1624510220890">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1230" height="275" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1624510220890" />
+    <state width="1230" height="275" key="GridCell.Tab.2.left" timestamp="1624510220890">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1230" height="275" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1624510220890" />
+    <state width="1230" height="275" key="GridCell.Tab.2.right" timestamp="1624510220890">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1230" height="275" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1624510220890" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1624504417656">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1624504417656" />
+    <state x="618" y="320" key="VCS.ChangelistChooser" timestamp="1624354158950">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="618" y="320" key="VCS.ChangelistChooser/0.0.1536.824@0.0.1536.824" timestamp="1624354158950" />
+    <state x="599" y="283" key="VCS.EditChangelistDialog" timestamp="1624354135642">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="599" y="283" key="VCS.EditChangelistDialog/0.0.1536.824@0.0.1536.824" timestamp="1624354135642" />
+    <state x="361" y="142" key="Vcs.Push.Dialog.v2" timestamp="1624506230116">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1624506230116" />
+    <state x="577" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1624354105659">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="577" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1624354105659" />
+    <state x="327" y="67" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1624509944579">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="327" y="67" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1624509944579" />
+    <state x="452" y="128" width="631" height="568" key="find.popup" timestamp="1624418719253">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="452" y="128" width="631" height="568" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1624418719253" />
   </component>
 </project>

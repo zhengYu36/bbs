@@ -27,6 +27,36 @@
             //getFullYear得到4位数的年份 ，返回一串字符串
             return date.getFullYear() + "-" + month + "-" + currentDate;
         }
+
+
+        //翻页
+        function pageSkip(index) {
+            $.ajax({
+                type: 'post',
+                url: '/tieziServlet?method=tieziShow&currentPage='+index,
+                success: function (data) {
+                    var dataInfo = eval(data);
+                    var jsonData = dataInfo[0]['pt'];
+
+                    //首先清空 老数据
+                    $("#tiezi").text("");
+                    //普通帖子
+                    for (var i = 0;i < jsonData.length;i++){
+                        $("#tiezi").append("<header><h3><a href='about.jsp?id="+jsonData[i]['tid']+"'>"+jsonData[i]['title']+"</a></h3>"
+                            +"<p class=\"postinfo\">"+jsonData[i]['uname']+"<time>&nbsp;&nbsp;&nbsp;&nbsp;"
+                            +ChangeDateFormat(jsonData[i]['tdate'])+"</time></p></header>"
+                            +"<p>"+jsonData[i]['tcontent'].substr(0,100)+"……"+"</p>"
+                            +"<footer><span class=\"author\">浏览人数&nbsp;&nbsp;&nbsp;"+jsonData[i]['tnum1']+"</span>"
+                            +"<span>回帖人数&nbsp;&nbsp;&nbsp;"+jsonData[i]['tnum2']+"</span></footer><div class=\"clear\"></div>"
+                        )
+                    }
+                },
+                error: function () {
+                    alert("失败！")
+                }
+            })
+        }
+
         $(function () {
             //普通帖子
             let pageInfo = 1;
@@ -38,6 +68,7 @@
                     var dataInfo = eval(data);
                     var jsonData = dataInfo[0]['pt'];
                     var hotData = dataInfo[0]['hot'];
+                    var pageInfo = dataInfo[0]['pageInfo'];
                     //普通帖子
                     for (var i = 0;i < jsonData.length;i++){
                         $("#tiezi").append("<header><h3><a href='about.jsp?id="+jsonData[i]['tid']+"'>"+jsonData[i]['title']+"</a></h3>"
@@ -54,6 +85,20 @@
                         var aa = "<li><a href='about.jsp?id="+hotData[i]['tid']+"'>"+hotData[i]['title']+"</a></li>";
                         $("#hotList").append(aa);
                     }
+
+                    //分页图标展示
+                    if(pageInfo != null){
+                        let pageCount = pageInfo['pageCount'];
+                        for(var i=0;i<pageCount;i++){
+                            let page =
+                                "<a href='/tieziServlet?method=tieziShow&currentPage="+(i+1)+"'>"+(i+1)+"</a>";
+
+                            let pageone = "<a onclick=pageSkip("+(i+1)+")>"+(i+1)+"</a>";;
+                            $("#pageInfo").append(pageone);
+                        }
+
+                    }
+
                 }
             });
         });
@@ -100,12 +145,8 @@
                 </article>
 
                 <!-- 页数，这里后面是从后台来获取-->
-                <div class="wp-pagenavi">
-                    <span class="current">1</span><a href="/page/2/" title="2">2</a><a href="/page/3/" title="3">3</a><a
-                        href="/page/4/" title="4">4</a><a href="/page/5/" title="5">5</a><a href="/page/6/"
-                                                                                            title="6">6</a><a
-                        href="/page/7/" title="7">7</a><a href="/page/8/" title="8">8</a><a href="/page/2/">Next
-                    &raquo;</a><span class="extend">...</span><a href="/page/27/" title="Last &raquo;">Last &raquo;</a>
+                <div class="wp-pagenavi" id="pageInfo">
+
                 </div>
                 <div class="clear"></div>
             </div>
