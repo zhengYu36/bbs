@@ -25,7 +25,8 @@ public class TieziServiceImpl implements TieziService {
         TieziVo tv = new TieziVo();
 
         //普通帖子需要进行分页
-        String sql = "select t1.*,t2.uname from tiezi t1 left join users t2 on t1.uid = t2.uid where status = 0";
+        String sql = "select t1.*,t2.uname from tiezi t1 left join users t2 on t1.uid = t2.uid where status = 0 order" +
+                " by t1.tdate desc";
         //总条数
         //String totalNumSql = SqlPageUtil.countSql(sql);
         long totalNum = tieziDao.tieziTotal(sql);

@@ -24,6 +24,7 @@
 								<th>创建时间</th>
 								<th>浏览数</th>
 								<th>回帖数</th>
+								<th>帖子状态</th>
 								<th>操作</th>
 							</tr>
 						</thead>
@@ -59,21 +60,42 @@
 
 				$.ajax({
 					type:'post',
-					url:'/tieziServlet?method=tieziShow',
+					url:'/tieziServlet?method=tieziShowInit',
                     contentType: 'application/json;charset=utf-8',
 					success:function (data) {
                         var jsonData = eval(data);
                         console.log(jsonData)
                         for (let i = 0; i < jsonData.length; i++) {
+
+							var title = jsonData[i]['title'];
+							if(title.length>20){
+								title = title.substr(0,13)+"……";
+							}
+
+							var tcontent = jsonData[i]['tcontent'];
+							if(tcontent.length>20){
+								tcontent = tcontent.substr(0,13)+"……";
+							}
+
+							var status = jsonData[i]['status'];
+							console.log("status is:"+status);
+							var statusInfo = "未加精";
+							if(status == 1){
+								statusInfo = "已加精";
+								statusInfo = "<span style=\"color:red\">"+statusInfo;
+							}
+
+
                             $("#content").append(
                                 `<tr>
 
 							<td>` + (i + 1) + `</td>
-							<td>` + jsonData[i]['title'] + `</td>
-							<td>` + jsonData[i]['tcontent'] + `</td>
+							<td>` + title + `</td>
+							<td>` + tcontent + `</td>
 							<td>` + ChangeDateFormat(jsonData[i]['tdate']) +`</td>
 							<td>` + jsonData[i]['tnum1'] +`</td>
 							<td>` + jsonData[i]['tnum2'] +`</td>
+							<td>` + statusInfo +`</td>
 							<td><button class="layui-btn layui-btn-small layui-icon" onclick="jiajing(` +
 									jsonData[i]['tid'] + `)">加精
 							</button>

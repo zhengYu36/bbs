@@ -17,7 +17,7 @@ public class TieziDaoImpl extends DaoUtlis implements TieziDao {
      */
     @Override
     public List<Tiezi> TieziShow() {
-        String sql = "select * from tiezi where status = 0";
+        String sql = "select * from tiezi order by tdate desc";
         //查询数据
         List<Tiezi> list = super.query(sql,null,Tiezi.class);
         return (list!=null&&list.size()>0?list:null);
@@ -40,7 +40,7 @@ public class TieziDaoImpl extends DaoUtlis implements TieziDao {
     //查询热帖
     @Override
     public List<Tiezi> hottie() {
-        String sql = "select * from tiezi where status = 1 limit 9";
+        String sql = "select * from tiezi where status = 1 order by tdate desc limit 9";
         List<Tiezi> list = super.query(sql,null,Tiezi.class);
         return (list!=null&&list.size()>0?list:null);
     }

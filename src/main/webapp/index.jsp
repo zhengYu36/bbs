@@ -28,6 +28,10 @@
             return date.getFullYear() + "-" + month + "-" + currentDate;
         }
 
+        function logout() {
+            localStorage.setItem("uid",0);
+        }
+
 
         //翻页
         function pageSkip(index) {
@@ -128,7 +132,20 @@
 
                 }
             });
+
         });
+
+
+        $(function () {
+            let user = localStorage.getItem("uid");
+            if(user != null && user > 0){
+                //会员登录
+                $("#siteinfo").text("");
+                $("#siteinfo").append("<a onclick=logout() href=\"index.jsp\">注销</a> | <a href=\"contact.jsp\">发帖</a>");
+                //显示回到首页
+            }
+        });
+
     </script>
 </head>
 

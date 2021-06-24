@@ -2,7 +2,7 @@
 <%@page isELIgnored="false" %>
 <head>
 	<meta charset="UTF-8"/>
-	<title>会员</title>
+	<title>会员-废弃</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<!--[if IE]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>

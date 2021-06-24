@@ -117,7 +117,7 @@
                 if (reply != null) {
                     for (var i = 0; i < reply.length; i++) {
                         var info =
-                            "<div class=\"avatar\"><img src=\"http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=38\">" +
+                            "<div class=\"avatar\"><img src=\"images/head.png\">" +
                             " <p class=\"author\">" +
                             " <span class=\"name\">" + reply[i]['uname'] +
                             "</span> <time class=\"date\">" + ChangeDateFormat(reply[i]['tdate']) +

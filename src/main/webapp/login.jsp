@@ -25,10 +25,10 @@
             success:function (msg) {
                 if(msg == 1){
                     location.href="admin/index.html";
-					localStorage.setItem("uid",msg);
+					localStorage.setItem("uid",9);
 				}else if (msg == 0) {
-                    location.href="fatie.jsp";
-					localStorage.setItem("uid",msg);
+                    location.href="index.jsp";
+					localStorage.setItem("uid",9);
 				}else {
                     alert("请输入正确的用户名和密码");
 				}

@@ -38,6 +38,10 @@ public class TieziServlet extends HttpServlet {
             huitie(request,response);
         }else if(method.equals("hottie")){
             hottie(request,response);
+        }else if (method.equals("tieziShowInit")){
+            tieziShowInit(request,response);
+        }else if (method.equals("jiajing")){
+            jiajing(request,response);
         }
     }
 
@@ -94,6 +98,14 @@ public class TieziServlet extends HttpServlet {
         tiezi.setPid(Integer.parseInt(pid));
         tiezi.setUid(uid);
         tieziService.huitie(tiezi);
+    }
+
+    public void tieziShowInit(HttpServletRequest request,HttpServletResponse response) throws IOException {
+        List<Tiezi> tieziList = tieziService.tieziShow();
+        if (tieziList != null) {
+            JSONArray jsonArray = JSONArray.fromObject(tieziList);
+            response.getWriter().print(jsonArray);
+        }
     }
 
     /**

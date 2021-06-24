@@ -25,8 +25,8 @@
                 url:'/tieziServlet?method=fatie',
                 data:{title:title,tcontent:tcontent},
                 success:function () {
-                    alert("发帖成功！")
-                    location.href = "/fatie.jsp";
+                    alert("发帖成功！");
+                    location.href = "/index.jsp";
                 },
                 error:function () {
                   alert("失败！")
@@ -41,7 +41,7 @@
 <div id="bodywrap">
     <section id="pagetop">
         <p id="siteinfo">
-            <a href="login.jsp">登录</a> | <a href="register.jsp">注册</a>
+            <%--<a href="login.jsp">登录</a> | <a href="register.jsp">注册</a>--%>
         </p>
     </section>
     <header id="pageheader">
