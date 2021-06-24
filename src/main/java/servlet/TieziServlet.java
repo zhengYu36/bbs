@@ -107,7 +107,7 @@ public class TieziServlet extends HttpServlet {
         //当前页数
         String currentPage = "1";
         if(request != null){
-             currentPage = request.getParameter("currentPage").trim();
+             currentPage = request.getParameter("currentPage");
             if(StringUtils.isEmpty(currentPage)){
                 currentPage = "1";
             }

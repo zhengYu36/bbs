@@ -37,7 +37,7 @@
                 success: function (data) {
                     var dataInfo = eval(data);
                     var jsonData = dataInfo[0]['pt'];
-
+                    var pageInfo = dataInfo[0]['pageInfo'];
                     //首先清空 老数据
                     $("#tiezi").text("");
                     //普通帖子
@@ -50,6 +50,24 @@
                             +"<span>回帖人数&nbsp;&nbsp;&nbsp;"+jsonData[i]['tnum2']+"</span></footer><div class=\"clear\"></div>"
                         )
                     }
+
+                    $("#pageInfo").text("");
+                    //需要显示当前页
+                    if(pageInfo != null){
+                        let pageCount = pageInfo['pageCount'];
+                        for(var i=1;i<=pageCount;i++){
+                            let pageone;
+                            if(i == index){
+                                //默认选择第一页
+                                pageone = "<span class=\"current\">"+i+"</a>";;
+                            }else{
+                                pageone = "<a onclick=pageSkip("+i+")>"+i+"</a>";;
+                            }
+                            $("#pageInfo").append(pageone);
+                        }
+
+                    }
+
                 },
                 error: function () {
                     alert("失败！")
@@ -82,18 +100,27 @@
 
                     //热帖
                     for (var i = 0;i < hotData.length;i++){
-                        var aa = "<li><a href='about.jsp?id="+hotData[i]['tid']+"'>"+hotData[i]['title']+"</a></li>";
+                        var hottitle = hotData[i]['title'];
+                        if(hottitle.length>20){
+                            hottitle = hottitle.substr(0,13)+"……";
+                        }
+
+                        var aa =
+                            "<li><a href='about.jsp?id="+hotData[i]['tid']+"'>"+hottitle+"</a></li>";
                         $("#hotList").append(aa);
                     }
 
-                    //分页图标展示
+                    //分页图标展示，并显示当前是那一页
                     if(pageInfo != null){
                         let pageCount = pageInfo['pageCount'];
                         for(var i=0;i<pageCount;i++){
-                            let page =
-                                "<a href='/tieziServlet?method=tieziShow&currentPage="+(i+1)+"'>"+(i+1)+"</a>";
-
-                            let pageone = "<a onclick=pageSkip("+(i+1)+")>"+(i+1)+"</a>";;
+                            let pageone;
+                            if(i==0){
+                                //默认选择第一页
+                                pageone = "<span class=\"current\">"+(i+1)+"</a>";;
+                            }else{
+                                pageone = "<a onclick=pageSkip("+(i+1)+")>"+(i+1)+"</a>";;
+                            }
                             $("#pageInfo").append(pageone);
                         }
 
@@ -123,14 +150,10 @@
                 <h2 class="ftheading">Featured</h2>
                 <div class="ftwrap">
                     <div class="ftimg">
-                        <img src="images/img3.jpg" width="204" height="128" alt="img3"></div>
+                        <img src="images/index.jpeg" width="204" height="128" alt="index"></div>
                     <div class="fttxt">
-                        <h3>Featured Content</h3>
-                        <p>Lorema psum dolor sit amet,
-                            consectetur adipiscing elit.
-                            Integer egestas purus bibendum
-                            neque aliquam ut posuere elit semper. Fusce sagittis pharetra eros, sit amet consequat sem
-                            mollis vitae. </p>
+                        <%--<h3>Featured Content</h3>--%>
+                        <p>像悲伤，像自由，像无所畏惧，像极度渴望的灵魂! 就在这里让我们相遇、相知、相识. </p>
                     </div>
                 </div>
             </section>
@@ -146,7 +169,6 @@
 
                 <!-- 页数，这里后面是从后台来获取-->
                 <div class="wp-pagenavi" id="pageInfo">
-
                 </div>
                 <div class="clear"></div>
             </div>
@@ -155,11 +177,9 @@
         <!-- 右边论坛帖子加精 -->
         <section id="sidebar">
             <div id="sidebarwrap">
-                <h2>About SilverBlog</h2>
-                <p>SilverBlog is a free CSS Template released under GNU GPL license. You are free to use / modify it in
-                    any way you want without any restrictions. A link back to this website will always be appreciated.
-                    <a href="#">Read More</a></p>
-
+                <h2>最热资讯</h2>
+                <p>“青眼白龙”游戏王卡牌遭法拍：起拍价 80 元 市场价数十万...
+                    <a target="_blank" href="http://www.pcbeta.com/viewnews-80919-1.html">Read More</a></p>
                 <!-- 这里是加精的帖子，是管理员来分配的 -->
                 <h2>热点</h2>
                 <ul id="hotList">
@@ -175,7 +195,7 @@
 <footer id="pagefooter">
     <div id="footerwrap">
         <div class="copyright">
-            2018 &copy; chenjiale的论坛
+            2021 &copy; Z121 的论坛
         </div>
     </div>
 </footer>

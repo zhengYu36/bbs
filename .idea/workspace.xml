@@ -9,11 +9,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49aa28ff-0576-456f-a8d2-0bb92e6aaa40" name="Default" comment="新增分页查询操作">
+    <list default="true" id="49aa28ff-0576-456f-a8d2-0bb92e6aaa40" name="Default" comment="index.jsp页面进行分页">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/index.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/TieziServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/TieziServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/untils/PageInfoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/untils/PageInfoUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/about.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/about.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bbs/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/index.jsp" afterDir="false" />
     </list>
     <list id="e0e2bca7-661a-42e2-83c8-efa2bb4f59ae" name="ignore" comment="忽略">
@@ -151,7 +153,7 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -177,11 +179,11 @@
       <recent name="entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\bbsMaster\github\bbs\src\main\webapp\images" />
       <recent name="E:\bbsMaster\github\bbs\src\main\webapp" />
       <recent name="E:\Program Files\JetBrains\IntelliJ IDEA 2018.1.2\workspease\bbs\src\main\webapp\admin" />
       <recent name="E:\Program Files\JetBrains\IntelliJ IDEA 2018.1.2\workspease\bbs\src\main\webapp" />
       <recent name="E:\Program Files\JetBrains\IntelliJ IDEA 2018.1.2\workspease\bbs\src\main\webapp\admin\css" />
-      <recent name="E:\Program Files\JetBrains\IntelliJ IDEA 2018.1.2\workspease\bbs\src\main\webapp\admin\css\modules" />
     </key>
   </component>
   <component name="RunManager">
@@ -363,7 +365,7 @@
       <workItem from="1528264162426" duration="9323000" />
       <workItem from="1624348214223" duration="21524000" />
       <workItem from="1624439813871" duration="934000" />
-      <workItem from="1624497996892" duration="6797000" />
+      <workItem from="1624497996892" duration="10762000" />
     </task>
     <task id="LOCAL-00001" summary="1.新增回帖页面&#10;2.帖子加精&#10;3.新增注销">
       <created>1624353755762</created>
@@ -386,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624506204534</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="index.jsp页面进行分页">
+      <created>1624510566908</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1624510566908</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,7 +429,8 @@
     <MESSAGE value="1.回帖消息的操作" />
     <MESSAGE value="回帖功能bug修复" />
     <MESSAGE value="新增分页查询操作" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增分页查询操作" />
+    <MESSAGE value="index.jsp页面进行分页" />
+    <option name="LAST_COMMIT_MESSAGE" value="index.jsp页面进行分页" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1624504426379">
@@ -439,42 +449,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1624352005361" />
-    <state width="441" height="618" key="DebuggerActiveHint" timestamp="1624505258390">
+    <state width="441" height="618" key="DebuggerActiveHint" timestamp="1624517128768">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="441" height="618" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1624505258390" />
-    <state width="1230" height="275" key="GridCell.Tab.0.bottom" timestamp="1624510220889">
+    <state width="441" height="618" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1624517128768" />
+    <state width="1230" height="375" key="GridCell.Tab.0.bottom" timestamp="1624517195945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="275" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624510220889" />
-    <state width="1230" height="275" key="GridCell.Tab.0.center" timestamp="1624510220889">
+    <state width="1230" height="375" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624517195945" />
+    <state width="1230" height="375" key="GridCell.Tab.0.center" timestamp="1624517195945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="275" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1624510220889" />
-    <state width="1230" height="275" key="GridCell.Tab.0.left" timestamp="1624510220889">
+    <state width="1230" height="375" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1624517195945" />
+    <state width="1230" height="375" key="GridCell.Tab.0.left" timestamp="1624517195944">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="275" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1624510220889" />
-    <state width="1230" height="275" key="GridCell.Tab.0.right" timestamp="1624510220889">
+    <state width="1230" height="375" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1624517195944" />
+    <state width="1230" height="375" key="GridCell.Tab.0.right" timestamp="1624517195945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="275" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1624510220889" />
-    <state width="1230" height="275" key="GridCell.Tab.1.bottom" timestamp="1624510220890">
+    <state width="1230" height="375" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1624517195945" />
+    <state width="1230" height="375" key="GridCell.Tab.1.bottom" timestamp="1624517195945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="275" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624510220890" />
-    <state width="1230" height="275" key="GridCell.Tab.1.center" timestamp="1624510220890">
+    <state width="1230" height="375" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624517195945" />
+    <state width="1230" height="375" key="GridCell.Tab.1.center" timestamp="1624517195945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="275" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1624510220890" />
-    <state width="1230" height="275" key="GridCell.Tab.1.left" timestamp="1624510220889">
+    <state width="1230" height="375" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1624517195945" />
+    <state width="1230" height="375" key="GridCell.Tab.1.left" timestamp="1624517195945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="275" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1624510220889" />
-    <state width="1230" height="275" key="GridCell.Tab.1.right" timestamp="1624510220890">
+    <state width="1230" height="375" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1624517195945" />
+    <state width="1230" height="375" key="GridCell.Tab.1.right" timestamp="1624517195945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="275" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1624510220890" />
+    <state width="1230" height="375" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1624517195945" />
     <state width="1230" height="249" key="GridCell.Tab.18.bottom" timestamp="1624504083731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -491,22 +501,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1230" height="249" key="GridCell.Tab.18.right/0.0.1536.824@0.0.1536.824" timestamp="1624504083731" />
-    <state width="1230" height="275" key="GridCell.Tab.2.bottom" timestamp="1624510220890">
+    <state width="1230" height="375" key="GridCell.Tab.2.bottom" timestamp="1624517195945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="275" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624510220890" />
-    <state width="1230" height="275" key="GridCell.Tab.2.center" timestamp="1624510220890">
+    <state width="1230" height="375" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624517195945" />
+    <state width="1230" height="375" key="GridCell.Tab.2.center" timestamp="1624517195945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="275" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1624510220890" />
-    <state width="1230" height="275" key="GridCell.Tab.2.left" timestamp="1624510220890">
+    <state width="1230" height="375" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1624517195945" />
+    <state width="1230" height="375" key="GridCell.Tab.2.left" timestamp="1624517195945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="275" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1624510220890" />
-    <state width="1230" height="275" key="GridCell.Tab.2.right" timestamp="1624510220890">
+    <state width="1230" height="375" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1624517195945" />
+    <state width="1230" height="375" key="GridCell.Tab.2.right" timestamp="1624517195945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="275" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1624510220890" />
+    <state width="1230" height="375" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1624517195945" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1624504417656">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -535,5 +545,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="452" y="128" width="631" height="568" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1624418719253" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/servlet/TieziServlet.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -42,13 +42,15 @@
          */
         $(function () {
             let user = localStorage.getItem("uid");
-            if(user != null){
-                //隐藏登录
+            if(user != null && user > 0){
+                //会员登录
                 $("#siteinfoDev").hide();
-
                 //显示回到首页
             }else{
+                //如果是游客不能登录
+                $("#indexInfoDev").hide();
                 $("#comment").hide();
+
             }
         });
 
@@ -71,6 +73,31 @@
                 }
             })
         }
+
+        $(function () {
+            //普通帖子
+            let pageInfo = 1;
+            $.ajax({
+                type: 'post',
+                url: '/tieziServlet?method=tieziShow&currentPage='+pageInfo,
+                contentType: 'application/json;charset=utf-8',
+                success: function (data) {
+                    var dataInfo = eval(data);
+                    var hotData = dataInfo[0]['hot'];
+
+                    //热帖
+                    for (var i = 0;i < hotData.length;i++){
+                        var hottitle = hotData[i]['title'];
+                        if(hottitle.length>20){
+                            hottitle = hottitle.substr(0,13)+"……";
+                        }
+                        var aa =
+                            "<li><a href='about.jsp?id="+hotData[i]['tid']+"'>"+hottitle+"</a></li>";
+                        $("#hotList").append(aa);
+                    }
+                }
+            });
+        });
 
         $.ajax({
             type: 'get',
@@ -117,6 +144,7 @@
         </div>
 
         <p></p>
+        <div class="clear"></div>
         <div id="indexInfoDev">
             <p id="indexInfo">
                 <a href="index.jsp">首页</a>
@@ -151,8 +179,7 @@
                 <p class="text-area">
                     <!-- 隐藏uid 的值 -->
                 <div hidden id="pidInfo"></div>
-                <textarea name="comment" id="comment" cols="50" rows="10" tabindex="0" />
-                </textarea>
+                <textarea name="comment" id="comment" cols="50" rows="10" tabindex="0" /></textarea>
                 </p>
                 <p>
                     <input type="button" id="submit" value="提交" class="submit" onclick="huitieSubmit()">
@@ -166,15 +193,8 @@
         <section id="sidebar">
             <div id="sidebarwrap">
                 <h2>热点</h2>
-                <ul>
-                    <li><a href="#">Web Design</a>(4)</li>
-                    <li><a href="#">Graphics Design</a>(8)</li>
-                    <li><a href="#">Computers</a>(12)</li>
-                    <li><a href="#">Typography</a>(3)</li>
-                    <li><a href="#">Photogrphy</a>(4)</li>
-                    <li><a href="#">Mathematics</a>(5)</li>
-                    <li><a href="#">General News</a>(24)</li>
-                    <li><a href="#">Music and Entertainment</a>(1)</li>
+                <ul id="hotList">
+
                 </ul>
             </div>
         </section>
