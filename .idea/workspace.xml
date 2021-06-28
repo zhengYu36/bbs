@@ -9,58 +9,636 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49aa28ff-0576-456f-a8d2-0bb92e6aaa40" name="Default" comment="首页bug修复">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/head.png" afterDir="false" />
+    <list default="true" id="49aa28ff-0576-456f-a8d2-0bb92e6aaa40" name="Default" comment="sql测试文件">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/servlet/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/servlet/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/servlet/UsersServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/shiro/RememberAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/shiro/ShiroDBRealm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zy/untils/WebHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-shiro.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/springmvc-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fatie.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jstl.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/element.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/TieziDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/TieziDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/TieziServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/TieziServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/TieziServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/TieziServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/about.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/tieziManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/tieziManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/contact.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fatie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fatie.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/about.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/admin/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/admin/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/contact.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/LoginDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/dao/LoginDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TieziDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/dao/TieziDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/dao/UsersDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/LoginDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/dao/impl/LoginDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/TieziDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/dao/impl/TieziDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/UsersDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/dao/impl/UsersDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Replytiezi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/entity/Replytiezi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Tiezi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/entity/Tiezi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/entity/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/vo/TieziVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/entity/vo/TieziVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/service/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/TieziService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/service/TieziService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/service/UsersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/TieziServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/service/impl/TieziServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/UsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/service/impl/UsersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/TieziServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/servlet/TieziServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/UsersServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/untils/DaoUtlis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/untils/DaoUtlis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/untils/DbUtlis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/untils/DbUtlis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/untils/PageInfoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/untils/PageInfoUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/untils/SqlPageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zy/untils/SqlPageUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/about.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/.project" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/css/begtable.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/begtable.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/css/btable.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/btable.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/css/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/css/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/datas/area_data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/datas/area_data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/datas/btable_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/datas/btable_data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/datas/laytpl_laypage_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/datas/laytpl_laypage_data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/datas/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/datas/nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/datas/nav.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/datas/nav.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/datas/nav_content.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/datas/nav_content.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/datas/nav_member.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/datas/nav_member.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/images/0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/0.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/images/logo-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/logo-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/images/xx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/js/area.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/area.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/js/baajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/baajax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/js/begtable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/begtable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/js/btable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/btable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/js/city.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/city.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/js/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/js/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/js/paging.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/paging.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/js/tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/tab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/js/validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/font-awesome/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/font-awesome/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/font-awesome/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/layui.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/layui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/layui.mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/layui.mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/code.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/code.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/_all.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/_all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/aero.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/aero.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/aero.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/aero.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/aero@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/aero@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/blue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/blue@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/blue@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/flat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/flat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/flat.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/flat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/flat@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/flat@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/green.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/green.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/green.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/green.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/green@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/green@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/grey.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/grey.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/grey.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/grey.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/grey@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/grey@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/orange.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/orange.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/orange.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/orange.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/orange@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/orange@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/pink.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/pink.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/pink.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/pink@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/pink@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/purple.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/purple.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/purple.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/purple.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/purple@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/purple@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/red.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/red.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/red.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/red.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/red@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/red@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/yellow.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/yellow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/yellow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/flat/yellow@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/flat/yellow@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/futurico/futurico.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/futurico/futurico.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/futurico/futurico.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/futurico/futurico.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/futurico/futurico@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/futurico/futurico@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/icheck.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/icheck.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/line/_all.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/line/_all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/line/aero.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/line/aero.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/line/blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/line/blue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/line/green.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/line/green.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/line/grey.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/line/grey.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/line/line.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/line/line.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/line/line.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/line/line.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/line/line@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/line/line@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/line/orange.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/line/orange.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/line/pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/line/pink.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/line/purple.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/line/purple.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/line/red.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/line/red.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/line/yellow.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/line/yellow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/_all.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/_all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/aero.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/aero.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/aero.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/aero.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/aero@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/aero@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/blue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/blue@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/blue@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/green.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/green.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/green.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/green.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/green@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/green@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/grey.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/grey.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/grey.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/grey.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/grey@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/grey@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/minimal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/minimal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/minimal.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/minimal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/minimal@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/minimal@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/orange.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/orange.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/orange.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/orange.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/orange@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/orange@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/pink.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/pink.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/pink.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/pink@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/pink@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/purple.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/purple.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/purple.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/purple.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/purple@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/purple@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/red.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/red.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/red.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/red.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/red@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/red@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/yellow.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/yellow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/yellow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/minimal/yellow@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/minimal/yellow@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/polaris/polaris.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/polaris/polaris.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/polaris/polaris.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/polaris/polaris.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/polaris/polaris@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/polaris/polaris@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/_all.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/_all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/aero.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/aero.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/aero.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/aero.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/aero@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/aero@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/blue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/blue@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/blue@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/green.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/green.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/green.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/green.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/green@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/green@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/grey.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/grey.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/grey.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/grey.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/grey@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/grey@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/orange.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/orange.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/orange.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/orange.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/orange@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/orange@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/pink.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/pink.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/pink.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/pink@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/pink@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/purple.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/purple.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/purple.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/purple.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/purple@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/purple@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/red.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/red.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/red.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/red.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/red@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/red@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/square.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/square.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/square.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/square.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/square@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/square@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/yellow.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/yellow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/yellow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/icheck/square/yellow@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/icheck/square/yellow@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/laydate/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/laydate/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/laydate/laydate.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/laydate/laydate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/layer/default/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/layer/default/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/layer/default/layer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/layer/default/layer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/font/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/font/iconfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/font/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/font/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/font/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/font/iconfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/font/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/font/iconfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/0.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/0.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/1.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/10.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/10.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/11.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/11.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/12.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/12.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/13.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/13.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/14.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/14.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/15.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/15.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/16.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/16.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/17.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/17.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/18.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/18.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/19.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/19.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/20.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/20.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/21.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/21.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/22.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/22.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/23.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/23.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/24.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/24.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/25.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/25.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/26.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/26.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/27.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/27.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/28.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/28.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/29.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/29.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/3.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/3.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/30.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/30.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/31.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/31.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/32.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/32.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/33.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/33.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/34.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/34.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/35.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/35.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/36.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/36.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/37.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/37.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/38.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/38.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/39.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/39.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/4.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/4.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/40.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/40.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/41.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/41.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/42.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/42.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/43.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/43.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/44.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/44.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/45.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/45.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/46.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/46.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/47.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/47.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/48.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/48.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/49.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/49.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/5.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/5.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/50.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/50.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/51.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/51.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/52.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/52.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/53.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/53.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/54.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/54.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/55.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/55.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/56.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/56.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/57.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/57.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/58.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/58.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/59.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/59.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/6.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/6.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/60.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/60.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/61.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/61.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/62.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/62.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/63.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/63.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/64.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/64.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/65.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/65.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/66.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/66.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/67.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/67.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/68.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/68.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/69.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/69.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/7.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/7.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/70.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/70.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/71.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/71.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/8.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/8.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/images/face/9.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/9.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/dest/layui.all.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/dest/layui.all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/dest/layui.mod.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/dest/layui.mod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/lib/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/lib/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/modules/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/modules/element.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/element.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/modules/flow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/flow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/modules/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/modules/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/modules/laydate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/laydate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/modules/layedit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/layedit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/modules/layer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/layer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/modules/laypage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/laypage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/modules/laytpl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/laytpl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/modules/mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/mobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/modules/tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/tree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/modules/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/lay/modules/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/layui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/layui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/modules/icheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/modules/icheck.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/plugins/layui/modules/pjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/modules/pjax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/temp/edit-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/temp/edit-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/tieziManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/tieziManager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/userManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/userManager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contact.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/fatie.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/dao/LoginDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/dao/UsersDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/dao/impl/LoginDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/dao/impl/UsersDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/service/LoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/service/UsersService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/service/impl/LoginServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/service/impl/UsersServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/servlet/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/servlet/UsersServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/lib/commons-logging-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/about.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/css/begtable.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/css/btable.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/css/global.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/css/layout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/css/table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/datas/area_data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/datas/btable_data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/datas/laytpl_laypage_data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/datas/nav.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/datas/nav.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/datas/nav_content.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/datas/nav_member.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/images/0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/images/logo-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/images/xx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/js/area.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/js/baajax.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/js/begtable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/js/btable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/js/city.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/js/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/js/layout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/js/navbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/js/paging.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/js/tab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/js/validator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/font-awesome/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/font-awesome/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/layui.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/_all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/aero.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/aero.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/aero@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/blue.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/blue@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/flat.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/flat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/flat@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/green.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/green@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/grey.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/grey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/grey@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/orange.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/orange.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/orange@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/pink.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/pink.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/pink@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/purple.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/purple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/purple@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/red.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/red@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/yellow.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/flat/yellow@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/futurico/futurico.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/futurico/futurico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/futurico/futurico@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/icheck.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/line/_all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/line/aero.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/line/blue.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/line/green.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/line/grey.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/line/line.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/line/line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/line/line@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/line/orange.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/line/pink.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/line/purple.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/line/red.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/line/yellow.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/_all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/aero.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/aero.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/aero@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/blue.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/blue@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/green.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/green@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/grey.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/grey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/grey@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/minimal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/minimal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/minimal@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/orange.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/orange.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/orange@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/pink.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/pink.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/pink@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/purple.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/purple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/purple@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/red.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/red@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/yellow.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/minimal/yellow@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/polaris/polaris.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/polaris/polaris.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/polaris/polaris@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/_all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/aero.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/aero.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/aero@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/blue.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/blue@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/green.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/green@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/grey.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/grey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/grey@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/orange.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/orange.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/orange@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/pink.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/pink.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/pink@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/purple.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/purple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/purple@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/red.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/red@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/square.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/square.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/square@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/yellow.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/icheck/square/yellow@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/laydate/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/laydate/laydate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/font/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/font/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/font/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/font/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/dest/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/dest/layui.mod.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/lib/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/modules/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/modules/laydate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/modules/laypage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/modules/mobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/modules/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/modules/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/lay/modules/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/modules/icheck.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/plugins/layui/modules/pjax.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/temp/edit-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/contact.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/LoginDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/UsersDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/impl/LoginDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/impl/UsersDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/LoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/UsersService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/LoginServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/UsersServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/UsersServlet.class" beforeDir="false" />
     </list>
     <list id="e0e2bca7-661a-42e2-83c8-efa2bb4f59ae" name="ignore" comment="忽略">
       <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/bbs.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/bbs/fatie.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/85651c19-30f9-4042-8ebf-254824ee7807.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/85651c19-30f9-4042-8ebf-254824ee7807.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rebel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/rebel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rebel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/rebel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bbs/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/dao/TieziDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/dao/TieziDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/dao/impl/TieziDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/dao/impl/TieziDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/entity/Tiezi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/entity/Tiezi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/entity/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/entity/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/dao/TieziDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/dao/impl/TieziDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/entity/Tiezi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/entity/Users.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/rebel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/service/TieziService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/service/TieziService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/service/impl/TieziServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/service/impl/TieziServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/servlet/TieziServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/servlet/TieziServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/untils/DaoUtlis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/untils/DaoUtlis.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/untils/DbUtlis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/untils/DbUtlis.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/admin/tieziManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/admin/tieziManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/admin/userManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/admin/userManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bbs/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/bbs/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/TieziDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/TieziDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/impl/TieziDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/impl/TieziDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/Tiezi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/Tiezi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/service/TieziService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/service/impl/TieziServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/servlet/TieziServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/untils/DaoUtlis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/WEB-INF/classes/untils/DbUtlis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/tieziManager.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/admin/userManager.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bbs/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/TieziDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/impl/TieziDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/Tiezi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/Users.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/rebel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/TieziService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/TieziService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/TieziServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/TieziServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlet/TieziServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlet/TieziServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/untils/DaoUtlis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/untils/DaoUtlis.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/untils/DbUtlis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/untils/DbUtlis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/TieziService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/TieziServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/TieziServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/untils/DaoUtlis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/untils/DbUtlis.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +725,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -163,7 +740,7 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -184,19 +761,22 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="servlet" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\bbsMaster\github\bbs\src\main\webapp\images" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\bbsMaster\github\bbs\src\main\webapp\WEB-INF\views\admin" />
+      <recent name="E:\bbsMaster\github\bbs\src\main\webapp\WEB-INF\views" />
+      <recent name="E:\bbsMaster\github\bbs\src\main\webapp\WEB-INF" />
+      <recent name="E:\bbsMaster\github\bbs\src\main\resources" />
+      <recent name="E:\bbsMaster\github\bbs\src\main\java\shiro" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zy.servlet" />
       <recent name="untils" />
       <recent name="entity" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\bbsMaster\github\bbs\src\main\webapp\static" />
+      <recent name="E:\bbsMaster\github\bbs\src\main\webapp\WEB-INF\views" />
       <recent name="E:\bbsMaster\github\bbs\src\main\webapp\images" />
-      <recent name="E:\bbsMaster\github\bbs\src\main\webapp" />
-      <recent name="E:\Program Files\JetBrains\IntelliJ IDEA 2018.1.2\workspease\bbs\src\main\webapp\admin" />
-      <recent name="E:\Program Files\JetBrains\IntelliJ IDEA 2018.1.2\workspease\bbs\src\main\webapp" />
-      <recent name="E:\Program Files\JetBrains\IntelliJ IDEA 2018.1.2\workspease\bbs\src\main\webapp\admin\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -336,7 +916,7 @@
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.159153" />
+          <option name="contentProportion" value="0.17213115" />
           <treeState>
             <expand>
               <path>
@@ -378,7 +958,10 @@
       <workItem from="1528264162426" duration="9323000" />
       <workItem from="1624348214223" duration="21524000" />
       <workItem from="1624439813871" duration="934000" />
-      <workItem from="1624497996892" duration="13951000" />
+      <workItem from="1624497996892" duration="16678000" />
+      <workItem from="1624523113851" duration="3262000" />
+      <workItem from="1624586676398" duration="19997000" />
+      <workItem from="1624847344591" duration="3577000" />
     </task>
     <task id="LOCAL-00001" summary="1.新增回帖页面&#10;2.帖子加精&#10;3.新增注销">
       <created>1624353755762</created>
@@ -415,7 +998,28 @@
       <option name="project" value="LOCAL" />
       <updated>1624517223423</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1.加精&#10;2.首先判断用户是否登录&#10;3.头像图标从项目中获取">
+      <created>1624520338414</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1624520338414</updated>
+    </task>
+    <task id="LOCAL-00007" summary="后台管理用户添加和管理">
+      <created>1624522066530</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1624522066530</updated>
+    </task>
+    <task id="LOCAL-00008" summary="sql测试文件">
+      <created>1624524916994</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1624524916994</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,6 +1038,31 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:E:/bbsMaster/github/bbs/src/main/webapp/WEB-INF/views/admin" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -443,6 +1072,11 @@
         </entry>
       </map>
     </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1.新增回帖页面&#10;2.帖子加精&#10;3.新增注销" />
@@ -451,17 +1085,20 @@
     <MESSAGE value="新增分页查询操作" />
     <MESSAGE value="index.jsp页面进行分页" />
     <MESSAGE value="首页bug修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="首页bug修复" />
+    <MESSAGE value="1.加精&#10;2.首先判断用户是否登录&#10;3.头像图标从项目中获取" />
+    <MESSAGE value="后台管理用户添加和管理" />
+    <MESSAGE value="sql测试文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="sql测试文件" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1624519216079">
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1624602645154">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1624519216079" />
-    <state x="574" y="89" key="#com.intellij.ide.util.MemberChooser" timestamp="1624503355134">
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1624602645154" />
+    <state x="574" y="89" key="#com.intellij.ide.util.MemberChooser" timestamp="1624588835970">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="89" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1624503355134" />
+    <state x="574" y="89" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1624588835970" />
     <state x="561" y="284" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1624431728548">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -470,46 +1107,94 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1624352005361" />
-    <state width="441" height="618" key="DebuggerActiveHint" timestamp="1624517128768">
+    <state width="441" height="618" key="DebuggerActiveHint" timestamp="1624605940034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="441" height="618" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1624517128768" />
-    <state x="549" y="155" key="FileChooserDialogImpl" timestamp="1624519234952">
+    <state width="441" height="618" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1624605940034" />
+    <state x="549" y="155" key="FileChooserDialogImpl" timestamp="1624606269273">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="155" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1624519234952" />
-    <state width="1230" height="374" key="GridCell.Tab.0.bottom" timestamp="1624520284575">
+    <state x="549" y="155" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1624606269273" />
+    <state width="1211" height="294" key="GridCell.Tab.-1.bottom" timestamp="1624606152479">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="374" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624520284575" />
-    <state width="1230" height="374" key="GridCell.Tab.0.center" timestamp="1624520284575">
+    <state width="1211" height="294" key="GridCell.Tab.-1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624606152479" />
+    <state width="1211" height="294" key="GridCell.Tab.-1.center" timestamp="1624606152479">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="374" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1624520284575" />
-    <state width="1230" height="374" key="GridCell.Tab.0.left" timestamp="1624520284574">
+    <state width="1211" height="294" key="GridCell.Tab.-1.center/0.0.1536.824@0.0.1536.824" timestamp="1624606152479" />
+    <state width="1211" height="294" key="GridCell.Tab.-1.left" timestamp="1624606152478">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="374" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1624520284574" />
-    <state width="1230" height="374" key="GridCell.Tab.0.right" timestamp="1624520284575">
+    <state width="1211" height="294" key="GridCell.Tab.-1.left/0.0.1536.824@0.0.1536.824" timestamp="1624606152478" />
+    <state width="1211" height="294" key="GridCell.Tab.-1.right" timestamp="1624606152479">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="374" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1624520284575" />
-    <state width="1230" height="374" key="GridCell.Tab.1.bottom" timestamp="1624520284575">
+    <state width="1211" height="294" key="GridCell.Tab.-1.right/0.0.1536.824@0.0.1536.824" timestamp="1624606152479" />
+    <state width="1211" height="276" key="GridCell.Tab.0.bottom" timestamp="1624850733428">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="374" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624520284575" />
-    <state width="1230" height="374" key="GridCell.Tab.1.center" timestamp="1624520284575">
+    <state width="1211" height="276" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624850733428" />
+    <state width="1211" height="276" key="GridCell.Tab.0.center" timestamp="1624850733427">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="374" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1624520284575" />
-    <state width="1230" height="374" key="GridCell.Tab.1.left" timestamp="1624520284575">
+    <state width="1211" height="276" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1624850733427" />
+    <state width="1211" height="276" key="GridCell.Tab.0.left" timestamp="1624850733427">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="374" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1624520284575" />
-    <state width="1230" height="374" key="GridCell.Tab.1.right" timestamp="1624520284575">
+    <state width="1211" height="276" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1624850733427" />
+    <state width="1211" height="276" key="GridCell.Tab.0.right" timestamp="1624850733427">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="374" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1624520284575" />
+    <state width="1211" height="276" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1624850733427" />
+    <state width="1211" height="276" key="GridCell.Tab.1.bottom" timestamp="1624850733428">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1211" height="276" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624850733428" />
+    <state width="1211" height="276" key="GridCell.Tab.1.center" timestamp="1624850733428">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1211" height="276" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1624850733428" />
+    <state width="1211" height="276" key="GridCell.Tab.1.left" timestamp="1624850733428">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1211" height="276" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1624850733428" />
+    <state width="1211" height="276" key="GridCell.Tab.1.right" timestamp="1624850733428">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1211" height="276" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1624850733428" />
+    <state width="1211" height="245" key="GridCell.Tab.13.bottom" timestamp="1624591290138">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1211" height="245" key="GridCell.Tab.13.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624591290138" />
+    <state width="1211" height="245" key="GridCell.Tab.13.center" timestamp="1624591290137">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1211" height="245" key="GridCell.Tab.13.center/0.0.1536.824@0.0.1536.824" timestamp="1624591290137" />
+    <state width="1211" height="245" key="GridCell.Tab.13.left" timestamp="1624591290137">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1211" height="245" key="GridCell.Tab.13.left/0.0.1536.824@0.0.1536.824" timestamp="1624591290137" />
+    <state width="1211" height="245" key="GridCell.Tab.13.right" timestamp="1624591290138">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1211" height="245" key="GridCell.Tab.13.right/0.0.1536.824@0.0.1536.824" timestamp="1624591290138" />
+    <state width="1211" height="245" key="GridCell.Tab.14.bottom" timestamp="1624591291056">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1211" height="245" key="GridCell.Tab.14.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624591291056" />
+    <state width="1211" height="245" key="GridCell.Tab.14.center" timestamp="1624591291056">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1211" height="245" key="GridCell.Tab.14.center/0.0.1536.824@0.0.1536.824" timestamp="1624591291056" />
+    <state width="1211" height="245" key="GridCell.Tab.14.left" timestamp="1624591291056">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1211" height="245" key="GridCell.Tab.14.left/0.0.1536.824@0.0.1536.824" timestamp="1624591291056" />
+    <state width="1211" height="245" key="GridCell.Tab.14.right" timestamp="1624591291056">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1211" height="245" key="GridCell.Tab.14.right/0.0.1536.824@0.0.1536.824" timestamp="1624591291056" />
     <state width="1230" height="249" key="GridCell.Tab.18.bottom" timestamp="1624504083731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -526,26 +1211,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1230" height="249" key="GridCell.Tab.18.right/0.0.1536.824@0.0.1536.824" timestamp="1624504083731" />
-    <state width="1230" height="374" key="GridCell.Tab.2.bottom" timestamp="1624520284575">
+    <state width="1211" height="276" key="GridCell.Tab.2.bottom" timestamp="1624850733429">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="374" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624520284575" />
-    <state width="1230" height="374" key="GridCell.Tab.2.center" timestamp="1624520284575">
+    <state width="1211" height="276" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1624850733429" />
+    <state width="1211" height="276" key="GridCell.Tab.2.center" timestamp="1624850733428">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="374" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1624520284575" />
-    <state width="1230" height="374" key="GridCell.Tab.2.left" timestamp="1624520284575">
+    <state width="1211" height="276" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1624850733428" />
+    <state width="1211" height="276" key="GridCell.Tab.2.left" timestamp="1624850733428">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="374" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1624520284575" />
-    <state width="1230" height="374" key="GridCell.Tab.2.right" timestamp="1624520284575">
+    <state width="1211" height="276" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1624850733428" />
+    <state width="1211" height="276" key="GridCell.Tab.2.right" timestamp="1624850733429">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1230" height="374" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1624520284575" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1624519238146">
+    <state width="1211" height="276" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1624850733429" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1624602671912">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1624519238146" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1624602671912" />
     <state x="618" y="320" key="VCS.ChangelistChooser" timestamp="1624354158950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -554,25 +1239,47 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="599" y="283" key="VCS.EditChangelistDialog/0.0.1536.824@0.0.1536.824" timestamp="1624354135642" />
-    <state x="361" y="142" key="Vcs.Push.Dialog.v2" timestamp="1624506230116">
+    <state x="361" y="142" key="Vcs.Push.Dialog.v2" timestamp="1624587136710">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1624506230116" />
-    <state x="577" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1624354105659">
+    <state x="361" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1624587136710" />
+    <state x="577" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1624847452537">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="577" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1624354105659" />
-    <state x="327" y="67" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1624509944579">
+    <state x="577" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1624847452537" />
+    <state x="327" y="67" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1624606965510">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="327" y="67" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1624509944579" />
-    <state x="452" y="128" width="631" height="568" key="find.popup" timestamp="1624519316139">
+    <state x="327" y="67" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1624606965510" />
+    <state x="452" y="128" width="631" height="568" key="find.popup" timestamp="1624613662861">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="452" y="128" width="631" height="568" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1624519316139" />
+    <state x="452" y="128" width="631" height="568" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1624613662861" />
+    <state x="515" y="186" width="380" height="376" key="git4idea.ui.GitTagDialog" timestamp="1624588084034">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="515" y="186" width="380" height="376" key="git4idea.ui.GitTagDialog/0.0.1536.824@0.0.1536.824" timestamp="1624588084034" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1624595974221">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1624595974221" />
     <state x="491" y="318" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1624518730076">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="491" y="318" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1536.824@0.0.1536.824" timestamp="1624518730076" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zy/servlet/LoginServlet.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="DlvErrorBreakpoint" />
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
