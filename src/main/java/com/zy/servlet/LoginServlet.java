@@ -41,6 +41,11 @@ public class LoginServlet {
         Users users = new Users();
         users.setUname(userName);
         users.setUpwd(password);
+        users.setUquestion("0");
+        users.setUanswer("0");
+        users.setUemail("");
+        //默认为会员
+        users.setUtype("0");
         loginService.register(users);
     }
 

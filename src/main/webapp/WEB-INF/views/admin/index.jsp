@@ -36,7 +36,7 @@
 						<li class="layui-nav-item">
 							<a href="javascript:;" class="admin-header-user">
 								<!--<img src="images/0.jpg" />-->
-								<span><a  onclick="logout()"  href="../index.jsp">注销</a></span>
+								<span><a  onclick="logout()"  href="/index">注销</a></span>
 
 							</a>
 						</li>

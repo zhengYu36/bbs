@@ -71,6 +71,8 @@
 				 /loginServlet/** = anon
 				 /tieziServlet/** = anon
 				 /css/** = anon
+				 /images/** = anon
+				 /fonts/** = anon
 				 /js/** = anon
 	        	 /static/** = anon
 	        	 /ueditor/** = anon
@@ -78,6 +80,7 @@
 	        	 /upload/** = anon
 	             /do_login = anon
 				 /login = anon
+				 /register = anon
 	             /forget**/** = anon
 	             /** = authc
 	        </value>  

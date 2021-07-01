@@ -8,7 +8,7 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <!--[if IE 6]>
-    <script src="js/belatedPNG.js"></script>
+    <script src="../../js/belatedPNG.js"></script>
     <script>
         DD_belatedPNG.fix('*');
     </script>
@@ -121,7 +121,7 @@
                 if (reply != null) {
                     for (var i = 0; i < reply.length; i++) {
                         var info =
-                            "<div class=\"avatar\"><img src=\"images/head.png\">" +
+                            "<div class=\"avatar\"><img src=\"../../images/head.png\">" +
                             " <p class=\"author\">" +
                             " <span class=\"name\">" + reply[i]['uname'] +
                             "</span> <time class=\"date\">" + ChangeDateFormat(reply[i]['tdate']) +
@@ -143,7 +143,7 @@
     <section id="pagetop">
         <div id="siteinfoDev">
             <p id="siteinfo">
-                <a href="login.jsp">登录</a> | <a href="register.jsp">注册</a>
+                <a href="/login">登录</a> | <a href="/register">注册</a>
             </p>
         </div>
 

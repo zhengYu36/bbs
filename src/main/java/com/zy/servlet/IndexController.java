@@ -1,11 +1,16 @@
 package com.zy.servlet;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.session.Session;
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class IndexController {
-	
+
+	public static final String SESSION_LOGIN_USER = "session_login_user";
+
 	@RequestMapping("/index")
 	public String index(){
 		return "index";
@@ -13,6 +18,11 @@ public class IndexController {
 
 	@RequestMapping("/logout")
 	public String lgout(){
+
+
+		Subject subject = SecurityUtils.getSubject();
+		subject.logout();
+
 		//并注销session
 		return "index";
 	}

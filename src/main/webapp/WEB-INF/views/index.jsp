@@ -8,7 +8,7 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <!--[if IE 6]>
-    <script src="js/belatedPNG.js"></script>
+    <script src="../../js/belatedPNG.js"></script>
     <script>
         DD_belatedPNG.fix('*');
     </script>

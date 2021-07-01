@@ -39,9 +39,6 @@ public class ShiroDBRealm extends AuthorizingRealm {
 		//如果是当前用户进行了登录，
         if (user != null) {
 
-           /* if (user.getStatus() == User.STATUS_NO) {
-                throw new LockedAccountException();
-            }*/
             AuthenticationInfo authcInfo = new SimpleAuthenticationInfo(user.getUname(), user.getUpwd(), getName());
             setSession(WebHelper.SESSION_LOGIN_USER, user);
 

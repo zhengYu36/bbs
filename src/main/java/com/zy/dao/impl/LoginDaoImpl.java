@@ -28,8 +28,8 @@ public class LoginDaoImpl extends DaoUtlis implements LoginDao {
      */
     @Override
     public void register(Users users) {
-        String sql = "INSERT INTO users (uname,upwd) VALUES(?,?)";
-        Object[] num = {users.getUname(),users.getUpwd()};
+        String sql = "insert into users(uname,upwd,uquestion,uanswer,uemail,utype) values(?,?,?,?,?,?)";
+        Object[] num = {users.getUname(),users.getUpwd(),0,1,users.getUemail(),users.getUtype()};
         super.update(sql,num);
     }
 }

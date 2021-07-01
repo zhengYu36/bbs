@@ -8,12 +8,12 @@
 <meta name="keywords" content="Internship Sign In & Sign Up Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
-<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/snow.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/loginStyle.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../css/snow.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/loginStyle.css" rel="stylesheet" type="text/css" media="all" />
 <!-- //web font -->
 </head>
-<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.js"></script>
 <script type="text/javascript">
 	function register() {
 	    if ($("#pwdOne").val() === $("#pwdTwo").val()){
@@ -24,7 +24,7 @@
 			url:'/loginServlet/register',
 			data:{userName:userName,pwd:pwd},
 			success:function () {
-                    location.href = "/login.jsp";
+                    location.href = "/login";
             },
             error:function () {
                 alert("no");
@@ -46,7 +46,7 @@
 			</div>
 
 <div class="top-buttons-agileinfo">
-<a href="login.jsp">登录</a><a href="register.jsp" class="active">注册</a>
+<a href="/login">登录</a><a href="/register" class="active">注册</a>
 </div>
 <div class="main-agileits">
 <!--form-stars-here-->
@@ -68,7 +68,7 @@
 		<p><a> © 2018</a></p>
 	</div>
 	<!-- //copyright --> 
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
 
 </body>
 </html>
