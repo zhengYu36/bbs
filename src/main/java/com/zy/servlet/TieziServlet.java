@@ -9,8 +9,10 @@ import net.sf.json.JSONArray;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -130,6 +132,36 @@ public class TieziServlet {
             response.getWriter().print(jsonArray);
         }
     }
+
+    //具体的帖子信息
+    @RequestMapping(value = "/about/{id}")
+    public ModelAndView about(HttpServletRequest request, HttpServletResponse response,
+                              @PathVariable int id) throws IOException {
+
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("about");
+
+        modelAndView.addObject("id",id);
+        HttpSession session = request.getSession();
+        List<Users> users = (List<Users>) session.getAttribute("userInfo");
+        if(users != null && users.size() > 0){
+            Users users1 = users.get(0);
+            modelAndView.addObject("uid",users1.getUid());
+        }
+
+        Tiezi tiezi = new Tiezi();
+        tiezi.setTid(id);
+        List<Tiezi> tieziList = tieziService.TieziSingleShow(tiezi);
+        if (tieziList != null) {
+            JSONArray jsonArray = JSONArray.fromObject(tieziList);
+            modelAndView.addObject("data",jsonArray);
+
+        }
+
+        return modelAndView;
+    }
+
 
     /**
      * 单个帖子

@@ -53,8 +53,11 @@ public class LoginServlet {
      * @throws IOException
      */
     @RequestMapping(value = "/loginUser", method = RequestMethod.POST)
-    protected String loginUser(HttpServletRequest request, HttpServletResponse response) throws ServletException,
+    protected ModelAndView loginUser(HttpServletRequest request, HttpServletResponse response) throws ServletException,
             IOException {
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("about");
 
         String username = request.getParameter("userName");
         String password = request.getParameter("pwd");
@@ -74,19 +77,23 @@ public class LoginServlet {
         if (list != null) {
             HttpSession session = request.getSession();
             session.setAttribute("userInfo", list);
+
+            modelAndView.addObject("uid",list.get(0).getUid());
             int trank = Integer.parseInt(list.get(0).getUtype());
             if (trank == 0) {
-                return "index";
+                modelAndView.setViewName("index");
+                //return "index";
                 //response.getWriter().print(0);
             } else {
-                return "admin/index";
+                modelAndView.setViewName("admin/index");
+                //return "admin/index";
                 //response.getWriter().print(1);
             }
         } else {
             response.getWriter().print("no");
         }
 
-        return "login";
+        return modelAndView;
     }
 
 

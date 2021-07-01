@@ -5,8 +5,8 @@ public class DbUtlis {
     public static Connection getConnection() {
         Connection conn = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/bbs?useUnicode=true&characterEncoding=utf-8";
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:mysql://127.0.0.1:3306/bbs?serverTimezone=Asia/Shanghai&characterEncoding=utf-8";
             String user = "root";
             String password = "123456";
             conn = DriverManager.getConnection(url, user, password);

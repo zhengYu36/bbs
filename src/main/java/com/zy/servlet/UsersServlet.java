@@ -22,14 +22,16 @@ public class UsersServlet {
     UsersServiceImpl usersService;
 
     @RequestMapping(value = "/addUser", method = RequestMethod.POST)
-    public void addUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public String addUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Users users = new Users();
         users.setUname(request.getParameter("uname"));
         users.setUpwd(request.getParameter("upwd"));
         users.setUemail(request.getParameter("uinfo"));
         users.setUtype(request.getParameter("power"));
         usersService.addUser(users);
-        response.sendRedirect(request.getContextPath() + "/admin/userManager.jsp");
+
+        return "admin/userManager";
+        //response.sendRedirect(request.getContextPath() + "/admin/userManager.jsp");
     }
 
     /**
@@ -40,10 +42,11 @@ public class UsersServlet {
      * @throws IOException
      */
     @RequestMapping(value = "/deleteUser", method = RequestMethod.POST)
-    public void deleteUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public String deleteUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
         int uid = Integer.parseInt(request.getParameter("id"));
         usersService.deleteUser(uid);
-        response.sendRedirect(request.getContextPath() + "/admin/userManager.jsp");
+        return "admin/userManager";
+        //response.sendRedirect(request+.getContextPath() + "/admin/userManager.jsp");
     }
 
     /**
@@ -54,7 +57,7 @@ public class UsersServlet {
      * @throws IOException
      */
     @RequestMapping(value = "/editUser", method = RequestMethod.POST)
-    public void editUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public String editUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Users users = new Users();
         users.setUid(Integer.parseInt(request.getParameter("u_id")));
         users.setUname(request.getParameter("u_username"));
@@ -62,7 +65,8 @@ public class UsersServlet {
         users.setUemail(request.getParameter("u_info"));
         users.setUtype(request.getParameter("power"));
         usersService.updateUser(users);
-        response.sendRedirect(request.getContextPath() + "/admin/userManager.jsp");
+        return "admin/userManager";
+        //response.sendRedirect(request.getContextPath() + "/admin/userManager.jsp");
 
     }
 

@@ -37,7 +37,7 @@
         function pageSkip(index) {
             $.ajax({
                 type: 'post',
-                url: '/tieziServlet/tieziShow&currentPage='+index,
+                url: '/tieziServlet/tieziShow?currentPage='+index,
                 success: function (data) {
                     var dataInfo = eval(data);
                     var jsonData = dataInfo[0]['pt'];
@@ -46,7 +46,7 @@
                     $("#tiezi").text("");
                     //普通帖子
                     for (var i = 0;i < jsonData.length;i++){
-                        $("#tiezi").append("<header><h3><a href='about.jsp?id="+jsonData[i]['tid']+"'>"+jsonData[i]['title']+"</a></h3>"
+                        $("#tiezi").append("<header><h3><a href='/tieziServlet/about/"+jsonData[i]['tid']+"'>"+jsonData[i]['title']+"</a></h3>"
                             +"<p class=\"postinfo\">"+jsonData[i]['uname']+"<time>&nbsp;&nbsp;&nbsp;&nbsp;"
                             +ChangeDateFormat(jsonData[i]['tdate'])+"</time></p></header>"
                             +"<p>"+jsonData[i]['tcontent'].substr(0,100)+"……"+"</p>"
@@ -93,7 +93,7 @@
                     var pageInfo = dataInfo[0]['pageInfo'];
                     //普通帖子
                     for (var i = 0;i < jsonData.length;i++){
-                        $("#tiezi").append("<header><h3><a href='about.jsp?id="+jsonData[i]['tid']+"'>"+jsonData[i]['title']+"</a></h3>"
+                        $("#tiezi").append("<header><h3><a href='/tieziServlet/about/"+jsonData[i]['tid']+"'>"+jsonData[i]['title']+"</a></h3>"
                             +"<p class=\"postinfo\">"+jsonData[i]['uname']+"<time>&nbsp;&nbsp;&nbsp;&nbsp;"
                             +ChangeDateFormat(jsonData[i]['tdate'])+"</time></p></header>"
                             +"<p>"+jsonData[i]['tcontent'].substr(0,100)+"……"+"</p>"
@@ -110,7 +110,7 @@
                         }
 
                         var aa =
-                            "<li><a href='about.jsp?id="+hotData[i]['tid']+"'>"+hottitle+"</a></li>";
+                            "<li><a href='/tieziServlet/about/"+hotData[i]['tid']+"'>"+hottitle+"</a></li>";
                         $("#hotList").append(aa);
                     }
 
@@ -137,11 +137,12 @@
 
 
         $(function () {
-            let user = localStorage.getItem("uid");
+            let user = <%=request.getAttribute("uid")%>;
+            console.log("user:"+user);
             if(user != null && user > 0){
                 //会员登录
                 $("#siteinfo").text("");
-                $("#siteinfo").append("<a onclick=logout() href=\"index.jsp\">注销</a> | <a href=\"contact.jsp\">发帖</a>");
+                $("#siteinfo").append("<a onclick=logout() href=\"/logout\">注销</a> | <a href=\"/contact\">发帖</a>");
                 //显示回到首页
             }
         });
@@ -153,7 +154,7 @@
 <div id="bodywrap">
     <section id="pagetop">
         <p id="siteinfo">
-            <a href="/login">登录</a> | <a href="register.jsp">注册</a>
+            <a href="/login">登录</a> | <a href="/register">注册</a>
         </p>
     </section>
     <header id="pageheader">

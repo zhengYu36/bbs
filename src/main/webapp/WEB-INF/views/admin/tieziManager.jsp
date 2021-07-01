@@ -4,7 +4,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>会员管理</title>
+		<title>帖子管理</title>
 		<link rel="stylesheet" href="../../../static/plugins/layui/css/layui.css" media="all" />
 		<link rel="stylesheet" href="../../../static/css/global.css" media="all">
 		<link rel="stylesheet" href="../../../static/plugins/font-awesome/css/font-awesome.min.css">
@@ -39,7 +39,7 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="plugins/layui/layui.js"></script>
+		<script type="text/javascript" src="../../../static/plugins/layui/layui.js"></script>
 		<script type="text/javascript" src="../../../js/jquery.js"></script>
 		<script type="text/javascript" charset="UTF-8">
             function ChangeDateFormat(d) {

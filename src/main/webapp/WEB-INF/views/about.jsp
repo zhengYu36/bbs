@@ -13,9 +13,9 @@
         DD_belatedPNG.fix('*');
     </script>
     <![endif]-->
-    <script src="js/jquery-1.4.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/loopedslider.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="../../js/jquery-1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/loopedslider.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/jquery.js" type="text/javascript"></script>
     <script type="text/javascript" charset="utf-8">
         function ChangeDateFormat(d) {
             //将时间戳转为int类型，构造Date类型
@@ -29,10 +29,11 @@
         }
 
         function GetQueryString(name) {
-            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            return <%=request.getAttribute("id")%>;
+           /* var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
             var r = window.location.search.substr(1).match(reg);
             if (r != null) return unescape(r[2]);
-            return null;
+            return null;*/
         }
 
         /*
@@ -41,7 +42,9 @@
         如果是游客记录   隐藏发帖款
          */
         $(function () {
-            let user = localStorage.getItem("uid");
+            //let user = localStorage.getItem("uid");
+            let user = <%=request.getAttribute("uid")%>;
+            console.log(user);
             if(user != null && user > 0){
                 //会员登录
                 $("#siteinfoDev").hide();
@@ -66,7 +69,7 @@
                 success: function () {
                     alert("回帖成功！");
                     //刷新自己
-                    location.href = "/about.jsp?id="+pid;
+                    location.href = "/tieziServlet/about/"+pid;
                 },
                 error: function () {
                     alert("失败！")
@@ -75,11 +78,11 @@
         }
 
         $(function () {
-            //普通帖子
+            //渲染右边的热帖
             let pageInfo = 1;
             $.ajax({
                 type: 'post',
-                url: '/tieziServlet/tieziShow&currentPage='+pageInfo,
+                url: '/tieziServlet/tieziShow?currentPage='+pageInfo,
                 contentType: 'application/json;charset=utf-8',
                 success: function (data) {
                     var dataInfo = eval(data);
@@ -92,13 +95,14 @@
                             hottitle = hottitle.substr(0,13)+"……";
                         }
                         var aa =
-                            "<li><a href='about.jsp?id="+hotData[i]['tid']+"'>"+hottitle+"</a></li>";
+                            "<li><a href='/tieziServlet/about/"+hotData[i]['tid']+"'>"+hottitle+"</a></li>";
                         $("#hotList").append(aa);
                     }
                 }
             });
         });
 
+        //尽量加载帖子信息
         $.ajax({
             type: 'get',
             url: '/tieziServlet/selectOne',
@@ -147,7 +151,7 @@
         <div class="clear"></div>
         <div id="indexInfoDev">
             <p id="indexInfo">
-                <a href="index.jsp">首页</a>
+                <a href="/index">首页</a>
             </p>
         </div>
 
