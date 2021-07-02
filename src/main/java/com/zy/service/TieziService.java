@@ -3,12 +3,13 @@ package com.zy.service;
 import com.zy.entity.Replytiezi;
 import com.zy.entity.Tiezi;
 import com.zy.entity.vo.TieziVo;
+import com.zy.untils.PageInfoUtils;
 
 import java.util.List;
 
 public interface TieziService {
 
-    public TieziVo allTie(String currentPage);
+    public TieziVo allTie(PageInfoUtils pageInfoUtils,String currentPage, Integer status);
 
     /**
      * 帖子查询展示

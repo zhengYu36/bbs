@@ -17,6 +17,9 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
     <!-- 开启注解驱动 -->  
     <mvc:annotation-driven/>
 
+    <!-- 启动spring mvc注解 -->
+    <mvc:default-servlet-handler/>
+
   	<!--   
          配置不用DispatcherServlet拦截的路径(例如：图片、CSS样式、js文件...):   
         路径可以自己设置，这里面我用static(WebRoot中的文件夹);   

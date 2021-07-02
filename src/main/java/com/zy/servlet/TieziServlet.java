@@ -5,6 +5,7 @@ import com.zy.entity.Tiezi;
 import com.zy.entity.Users;
 import com.zy.entity.vo.TieziVo;
 import com.zy.service.impl.TieziServiceImpl;
+import com.zy.untils.PageInfoUtils;
 import net.sf.json.JSONArray;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -101,11 +102,29 @@ public class TieziServlet {
 
     @RequestMapping(value = "/tieziShowInit",method = RequestMethod.POST)
     public void tieziShowInit(HttpServletRequest request,HttpServletResponse response) throws IOException {
-        List<Tiezi> tieziList = tieziService.tieziShow();
+
+        //当前页数
+        String currentPage = "1";
+        if(request != null){
+            currentPage = request.getParameter("currentPage");
+            if(StringUtils.isEmpty(currentPage)){
+                currentPage = "1";
+            }
+        }
+        //每页设置为9条数据
+        //分页数据
+        PageInfoUtils pageInfo = new PageInfoUtils();
+        pageInfo.setPageSize(9);
+        TieziVo tieziList = tieziService.allTie(pageInfo,currentPage,null);
         if (tieziList != null) {
             JSONArray jsonArray = JSONArray.fromObject(tieziList);
             response.getWriter().print(jsonArray);
         }
+/*        List<Tiezi> tieziList = tieziService.tieziShow();
+        if (tieziList != null) {
+            JSONArray jsonArray = JSONArray.fromObject(tieziList);
+            response.getWriter().print(jsonArray);
+        }*/
     }
 
     /**
@@ -126,7 +145,10 @@ public class TieziServlet {
             }
         }
 
-        TieziVo tieziList = tieziService.allTie(currentPage);
+        //分页数据
+        PageInfoUtils pageInfo = new PageInfoUtils();
+        //查询全部帖子信息(普通帖子分页，热帖不进行分页)
+        TieziVo tieziList = tieziService.allTie(pageInfo,currentPage,0);
         if (tieziList != null) {
             JSONArray jsonArray = JSONArray.fromObject(tieziList);
             response.getWriter().print(jsonArray);

@@ -11,10 +11,12 @@ import com.zy.untils.PageInfoUtils;
 import com.zy.untils.SqlPageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class TieziServiceImpl implements TieziService {
 
     /* @Autowired
@@ -26,20 +28,25 @@ public class TieziServiceImpl implements TieziService {
     UsersMapper usersDao;
 
     @Override
-    public TieziVo allTie(String currentPage) {
+    public TieziVo allTie(PageInfoUtils pageInfoUtils,String currentPage,Integer status) {
 
         TieziVo tv = new TieziVo();
 
-        //普通帖子需要进行分页
-        String sql = "select t1.*,t2.uname from tiezi t1 left join users t2 on t1.uid = t2.uid where status = 0 order" +
-                " by t1.tdate desc";
+        String sql = "";
+        if(status != null){
+            sql = "select t1.*,t2.uname from tiezi t1 left join users t2 on t1.uid = t2.uid where status = "+status+" " +
+                    "order" +
+                    " by t1.tdate desc";
+        }else{
+            sql = "select t1.*,t2.uname from tiezi t1 left join users t2 on t1.uid = t2.uid order" +
+                    " by t1.tdate desc";
+        }
 
         //总条数
         //String totalNumSql = SqlPageUtil.countSql(sql);
         long totalNum = tieziDao.tieziTotal(sql).size();
 
-        //分页数据
-        PageInfoUtils pageInfoUtils = new PageInfoUtils();
+
 
         //总页数
         long totalPage = SqlPageUtil.pageCount(pageInfoUtils.getPageSize(), totalNum);
@@ -55,6 +62,7 @@ public class TieziServiceImpl implements TieziService {
 
         //普通帖子
         tv.setPt(tiezis);
+        //热帖不需要分页
         tv.setHot(tieziDao.hottie());
         return tv;
     }
@@ -85,6 +93,11 @@ public class TieziServiceImpl implements TieziService {
     public List<Tiezi> TieziSingleShow(Tiezi tiezi) {
         //根据id获取的帖子肯定只有一个
         List<Tiezi> result = tieziDao.TieziSingleShow(tiezi);
+        //更新浏览次数
+        tieziDao.TieziViewUpdate(tiezi);
+
+        //查询完成之后，浏览数量需要加1
+
         if (result != null && result.size() > 0) {
 
             Tiezi tiezi1 = result.get(0);
