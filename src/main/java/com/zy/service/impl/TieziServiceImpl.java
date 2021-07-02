@@ -16,7 +16,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional
 public class TieziServiceImpl implements TieziService {
 
     /* @Autowired
@@ -95,6 +94,8 @@ public class TieziServiceImpl implements TieziService {
         List<Tiezi> result = tieziDao.TieziSingleShow(tiezi);
         //更新浏览次数
         tieziDao.TieziViewUpdate(tiezi);
+
+        //这里也可以假定失效，监测事物是否生效
 
         //查询完成之后，浏览数量需要加1
 
