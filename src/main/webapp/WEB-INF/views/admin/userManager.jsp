@@ -108,9 +108,6 @@
                 $("input[name='u_info']").val(jsonData[0]['uemail']);
                 $("#userUpdate input[name='power'][value='"+jsonData[0]['utype']+"']").attr("checked",true);
                 // $("input[name=power][value="+jsonData[0]['utype']+"]").attr("checked",true);
-                form.val({
-                    "power":jsonData[0]['utype']
-                })
                 layer.open({
                     type: 1,
                     title: '修改信息',

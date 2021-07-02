@@ -1,9 +1,6 @@
 package com.zy.shiro;
 
-
-
-
-import com.zy.dao.UsersDao;
+import com.zy.dao.UsersMapper;
 import com.zy.entity.Users;
 import com.zy.untils.WebHelper;
 import org.apache.shiro.SecurityUtils;
@@ -20,7 +17,7 @@ public class ShiroDBRealm extends AuthorizingRealm {
 
 	//获取用户
     @Autowired
-    private UsersDao userService;
+    private UsersMapper userService;
 
     /**
      * 验证当前用户

@@ -1,7 +1,6 @@
 package com.zy.service.impl;
 
-import com.zy.dao.LoginDao;
-import com.zy.dao.impl.LoginDaoImpl;
+import com.zy.dao.UsersMapper;
 import com.zy.entity.Users;
 import com.zy.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ import java.util.List;
 public class LoginServiceImpl implements LoginService {
 
     @Autowired
-    LoginDao loginDao;
+    UsersMapper loginDao;
 
     @Override
     public List<Users> login(Users users) {

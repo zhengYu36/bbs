@@ -53,6 +53,8 @@
                 //如果是游客不能登录
                 $("#indexInfoDev").hide();
                 $("#comment").hide();
+                $("#submit").attr({"disabled":"disabled"});
+                $("#submit").css({"background":"#dee4ec"});
 
             }
         });

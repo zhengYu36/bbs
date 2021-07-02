@@ -1,3 +1,4 @@
+/*
 package com.zy.dao.impl;
 
 import com.zy.dao.UsersDao;
@@ -7,12 +8,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public class UsersDaoImpl extends DaoUtlis implements UsersDao {
-    /**
+    */
+/**
      * 查询所有管理员信息
      * @return
-     */
+     *//*
+
     @Override
     public List<Users> UserManager() {
         String sql = "select * from users";
@@ -20,11 +22,13 @@ public class UsersDaoImpl extends DaoUtlis implements UsersDao {
         return (usersList!=null && usersList.size()>0 ? usersList : null);
     }
 
-    /**
+    */
+/**
      * 查询要修改的管理员
      * @param id
      * @return
-     */
+     *//*
+
     @Override
     public List<Users> editUser(int id) {
         String sql = "select * from users where uid = ?";
@@ -42,10 +46,12 @@ public class UsersDaoImpl extends DaoUtlis implements UsersDao {
     }
 
 
-    /**
+    */
+/**
      * 保存修改好的管理员
      * @param users
-     */
+     *//*
+
     @Override
     public void updateUser(Users users) {
         String sql = "UPDATE users set uname = ?,upwd = ?,uemail = ?,utype = ? where uid = ?";
@@ -67,3 +73,4 @@ public class UsersDaoImpl extends DaoUtlis implements UsersDao {
         super.update(sql,num);
     }
 }
+*/

@@ -1,9 +1,11 @@
 package com.zy.entity;
+
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class Tiezi {
-    private int tid;
+public class Tiezi implements Serializable {
+    private Integer tid;
 
     //标题
     private String title;
@@ -19,17 +21,14 @@ public class Tiezi {
 
     //回帖人数
     private Integer tnum2;
+
     private Integer pid;
 
-    //用户id
     private Integer uid;
     private String uname;
 
     //0 不是精帖  1 是精帖
     private Integer status;
-
-    //回帖信息
-    private List<Replytiezi> replytiezis;
 
     public String getUname() {
         return uname;
@@ -39,6 +38,9 @@ public class Tiezi {
         this.uname = uname;
     }
 
+    //回帖信息
+    private List<Replytiezi> replytiezis;
+
     public List<Replytiezi> getReplytiezis() {
         return replytiezis;
     }
@@ -47,11 +49,11 @@ public class Tiezi {
         this.replytiezis = replytiezis;
     }
 
-    public int getTid() {
+    public Integer getTid() {
         return tid;
     }
 
-    public void setTid(int tid) {
+    public void setTid(Integer tid) {
         this.tid = tid;
     }
 
@@ -60,7 +62,7 @@ public class Tiezi {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.title = title == null ? null : title.trim();
     }
 
     public String getTcontent() {
@@ -68,7 +70,7 @@ public class Tiezi {
     }
 
     public void setTcontent(String tcontent) {
-        this.tcontent = tcontent;
+        this.tcontent = tcontent == null ? null : tcontent.trim();
     }
 
     public Date getTdate() {

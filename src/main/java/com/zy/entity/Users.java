@@ -1,25 +1,27 @@
 package com.zy.entity;
 
-public class Users {
-    private int uid;
-    //名称
+import java.io.Serializable;
+
+public class Users  implements Serializable{
+    private Integer uid;
+
     private String uname;
-    //密码
+
     private String upwd;
+
     private String uquestion;
 
     private String uanswer;
-    //邮箱
+
     private String uemail;
 
-    //权限(1:管理员;0:会员)
     private String utype;
 
-    public int getUid() {
+    public Integer getUid() {
         return uid;
     }
 
-    public void setUid(int uid) {
+    public void setUid(Integer uid) {
         this.uid = uid;
     }
 
@@ -28,7 +30,7 @@ public class Users {
     }
 
     public void setUname(String uname) {
-        this.uname = uname;
+        this.uname = uname == null ? null : uname.trim();
     }
 
     public String getUpwd() {
@@ -36,7 +38,7 @@ public class Users {
     }
 
     public void setUpwd(String upwd) {
-        this.upwd = upwd;
+        this.upwd = upwd == null ? null : upwd.trim();
     }
 
     public String getUquestion() {
@@ -44,7 +46,7 @@ public class Users {
     }
 
     public void setUquestion(String uquestion) {
-        this.uquestion = uquestion;
+        this.uquestion = uquestion == null ? null : uquestion.trim();
     }
 
     public String getUanswer() {
@@ -52,7 +54,7 @@ public class Users {
     }
 
     public void setUanswer(String uanswer) {
-        this.uanswer = uanswer;
+        this.uanswer = uanswer == null ? null : uanswer.trim();
     }
 
     public String getUemail() {
@@ -60,7 +62,7 @@ public class Users {
     }
 
     public void setUemail(String uemail) {
-        this.uemail = uemail;
+        this.uemail = uemail == null ? null : uemail.trim();
     }
 
     public String getUtype() {
@@ -68,6 +70,6 @@ public class Users {
     }
 
     public void setUtype(String utype) {
-        this.utype = utype;
+        this.utype = utype == null ? null : utype.trim();
     }
 }

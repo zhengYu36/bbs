@@ -1,45 +1,24 @@
 package com.zy.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
-//回帖信息表
-public class Replytiezi {
-    private int tid;
+public class Replytiezi  implements Serializable {
+    private Integer tid;
 
-    //内容
     private String tcontent;
 
-    //创建时间
     private Date tdate;
 
-    //帖子id
     private Integer pid;
 
-    //用户id
     private Integer uid;
-    private String uname;
 
-    public String getUname() {
-        return uname;
-    }
-
-    public void setUname(String uname) {
-        this.uname = uname;
-    }
-
-    public Integer getUid() {
-        return uid;
-    }
-
-    public void setUid(Integer uid) {
-        this.uid = uid;
-    }
-
-    public int getTid() {
+    public Integer getTid() {
         return tid;
     }
 
-    public void setTid(int tid) {
+    public void setTid(Integer tid) {
         this.tid = tid;
     }
 
@@ -48,7 +27,7 @@ public class Replytiezi {
     }
 
     public void setTcontent(String tcontent) {
-        this.tcontent = tcontent;
+        this.tcontent = tcontent == null ? null : tcontent.trim();
     }
 
     public Date getTdate() {
@@ -65,5 +44,13 @@ public class Replytiezi {
 
     public void setPid(Integer pid) {
         this.pid = pid;
+    }
+
+    public Integer getUid() {
+        return uid;
+    }
+
+    public void setUid(Integer uid) {
+        this.uid = uid;
     }
 }

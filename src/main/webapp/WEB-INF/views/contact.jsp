@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page isELIgnored="false" %>
+<%@ include file="jstl.jsp"%>
 <head>
     <meta charset="UTF-8"/>
     <title>发帖</title>
@@ -18,20 +19,7 @@
     <script src="../../js/jquery.js" type="text/javascript"></script>
     <script type="text/javascript" charset="utf-8">
         function fatieSubmit() {
-            var title = $('#author').val();
-            var tcontent = $('#comment').val();
-            $.ajax({
-                type: 'post',
-                url: '/tieziServlet/fatie',
-                data: {title: title, tcontent: tcontent},
-                success: function () {
-                    alert("发帖成功！");
-                    location.href = "/index";
-                },
-                error: function () {
-                    alert("失败！")
-                }
-            })
+            $('#mySubmit').submit();
         }
 
     </script>
@@ -40,9 +28,19 @@
 <body>
 <div id="bodywrap">
     <section id="pagetop">
+        <div id="siteinfoDev">
         <p id="siteinfo">
             <%--<a href="login.jsp">登录</a> | <a href="register.jsp">注册</a>--%>
         </p>
+        </div>
+
+        <p></p>
+        <div class="clear"></div>
+        <div id="indexInfoDev">
+            <p id="indexInfo">
+                <a href="/index">首页</a>
+            </p>
+        </div>
     </section>
     <header id="pageheader">
         <h1>
@@ -56,23 +54,23 @@
 
                 <article class="post">
 
-                    <form class="form">
+                    <form class="form" action="${ctx }/tieziServlet/fatie"  method="post" id="mySubmit">
                         <p class="textfield">
                             <label for="author">
                                 <small>标题（你要发个什么帖子呢？）</small>
                             </label>
                         <div class="clear"></div>
-                        <input name="author" id="author" value="" size="22" tabindex="1" type="text">
+                        <input name="title" id="author" value="" size="22" tabindex="1" type="text">
                         </p>
                         <p>
                             <small><strong>内容</strong> 你想写些什么呢？
                             </small>
                         </p>
                         <p class="text-area">
-                            <textarea name="comment" id="comment" cols="50" rows="10" tabindex="4"></textarea>
+                            <textarea name="tcontent" id="comment" cols="50" rows="10" tabindex="4"></textarea>
                         </p>
                         <p>
-                            <input type="button" id="submit" value="提交" class="submit" onclick="fatieSubmit()">
+                            <input type="button" value="提交" class="submit" onclick="javascript:fatieSubmit()">
                             <input name="comment_post_ID" value="1" type="hidden">
                         </p>
                         <div class="clear"></div>

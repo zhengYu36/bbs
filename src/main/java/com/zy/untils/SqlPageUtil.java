@@ -44,12 +44,12 @@ public class SqlPageUtil {
     }
 
     private static String oraclePageSql(String sql, int pageSize, int page) {
-        return "select * from ( select page_temp.*, ROWNUM RN from ( "+ sql + " ) page_temp where ROWNUM <= "
+        return "select page_temp.* from ( select page_temp.*, ROWNUM RN from ( "+ sql + " ) page_temp where ROWNUM <= "
                 + (pageSize * (page + 1)) + " ) where RN >= " + (page * pageSize);
     }
 
     private static String mysqlPageSql(String sql, int pageSize, int page) {
-        return "select * from ( " + sql + " ) page_temp " + "limit " + ((page-1) * pageSize) + ", " + pageSize;
+        return "select page_temp.* from ( " + sql + " ) page_temp " + "limit " + ((page-1) * pageSize) + ", " + pageSize;
     }
 
     public enum Dialect{

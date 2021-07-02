@@ -1,3 +1,4 @@
+/*
 package com.zy.dao.impl;
 
 
@@ -10,12 +11,13 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 import java.util.List;
 
-@Service
 public class TieziDaoImpl extends DaoUtlis implements TieziDao {
-    /**
+    */
+/**
      * 查询全部帖子
      * @return
-     */
+     *//*
+
     @Override
     public List<Tiezi> TieziShow() {
         String sql = "select * from tiezi order by tdate desc";
@@ -47,11 +49,13 @@ public class TieziDaoImpl extends DaoUtlis implements TieziDao {
     }
 
 
-    /**
+    */
+/**
      * 查询单个帖子
      * @param tiezi
      * @return
-     */
+     *//*
+
     @Override
     public List<Tiezi> TieziSingleShow(Tiezi tiezi) {
         String sql = "select * from tiezi where tid = ?";
@@ -71,11 +75,13 @@ public class TieziDaoImpl extends DaoUtlis implements TieziDao {
     }
 
 
-    /**
+    */
+/**
      * 发帖
      * @param tiezi
      * @return
-     */
+     *//*
+
     @Override
     public void fatie(Tiezi tiezi) {
         String sql = "INSERT INTO tiezi (title,tcontent,tdate,tnum1,tnum2,pid,uid,status) VALUES(?,?,?,?,?,?,?,?);";
@@ -113,3 +119,4 @@ public class TieziDaoImpl extends DaoUtlis implements TieziDao {
         super.update(sql,num);
     }
 }
+*/

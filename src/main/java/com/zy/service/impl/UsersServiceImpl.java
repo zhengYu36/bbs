@@ -1,7 +1,6 @@
 package com.zy.service.impl;
 
-import com.zy.dao.UsersDao;
-import com.zy.dao.impl.UsersDaoImpl;
+import com.zy.dao.UsersMapper;
 import com.zy.entity.Users;
 import com.zy.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +12,11 @@ import java.util.List;
 public class UsersServiceImpl implements UsersService {
 
     @Autowired
-    UsersDao usersDao;
+    UsersMapper usersDao;
 
     /**
      * 查询所有管理员
+     *
      * @return
      */
     @Override
@@ -26,6 +26,7 @@ public class UsersServiceImpl implements UsersService {
 
     /**
      * 查询要修改的管理员信息
+     *
      * @param id
      * @return
      */
@@ -36,6 +37,7 @@ public class UsersServiceImpl implements UsersService {
 
     /**
      * 更新管理员信息
+     *
      * @param users
      */
     @Override
@@ -45,6 +47,7 @@ public class UsersServiceImpl implements UsersService {
 
     /**
      * 删除管理员
+     *
      * @param id
      */
     @Override

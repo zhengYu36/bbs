@@ -1,3 +1,4 @@
+/*
 package com.zy.dao;
 
 
@@ -7,10 +8,12 @@ import com.zy.entity.Tiezi;
 import java.util.List;
 
 public interface TieziDao {
-    /**
+    */
+/**
      * 查询全部帖子
      * @return
-     */
+     *//*
+
     public List<Tiezi> TieziShow();
 
     public List<Tiezi> TieziShowPage(String sql);
@@ -20,18 +23,22 @@ public interface TieziDao {
 
     public List<Tiezi> hottie();
 
-    /**
+    */
+/**
      * 查询单个帖子
      * @return
-     */
+     *//*
+
     public List<Tiezi> TieziSingleShow(Tiezi tiezi);
     public List<Replytiezi> replyTieziSingleShow(Tiezi tiezi);
 
-    /**
+    */
+/**
      * 发帖
      * @param tiezi
      * @return
-     */
+     *//*
+
     public void fatie(Tiezi tiezi);
 
     public void huitie(Replytiezi tiezi);
@@ -43,3 +50,4 @@ public interface TieziDao {
 
     public void replytie(Replytiezi tiezi);
 }
+*/

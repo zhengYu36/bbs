@@ -1,3 +1,4 @@
+/*
 package com.zy.dao.impl;
 
 import com.zy.dao.LoginDao;
@@ -7,13 +8,14 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public class LoginDaoImpl extends DaoUtlis implements LoginDao {
-    /**
+    */
+/**
      * 登录
      * @param users
      * @return
-     */
+     *//*
+
     @Override
     public List<Users> login(Users users) {
         String sql = "select * from users where uname = ? and upwd = ?";
@@ -22,10 +24,12 @@ public class LoginDaoImpl extends DaoUtlis implements LoginDao {
         return (list!=null&&list.size()>0?list:null);
     }
 
-    /**
+    */
+/**
      * 注册
      * @param users
-     */
+     *//*
+
     @Override
     public void register(Users users) {
         String sql = "insert into users(uname,upwd,uquestion,uanswer,uemail,utype) values(?,?,?,?,?,?)";
@@ -33,3 +37,4 @@ public class LoginDaoImpl extends DaoUtlis implements LoginDao {
         super.update(sql,num);
     }
 }
+*/

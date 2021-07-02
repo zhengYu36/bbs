@@ -50,7 +50,9 @@ public class TieziServlet {
      * @param response
      */
     @RequestMapping(value = "/fatie",method = RequestMethod.POST)
-    public void fatie(HttpServletRequest request,HttpServletResponse response){
+    public ModelAndView fatie(HttpServletRequest request,HttpServletResponse response){
+
+        ModelAndView md = new ModelAndView("index");
         String title = request.getParameter("title");
         String tcontent = request.getParameter("tcontent");
         int uid = 0;
@@ -59,13 +61,21 @@ public class TieziServlet {
         if(users != null && users.size() > 0){
             Users users1 = users.get(0);
             uid = users1.getUid();
+            md.addObject("uid",uid);
         }
-
         Tiezi tiezi = new Tiezi();
         tiezi.setTitle(title);
         tiezi.setTcontent(tcontent);
         tiezi.setUid(uid);
+        tiezi.setTdate(new Date());
+        tiezi.setTnum1(0);
+        tiezi.setTnum2(0);
+        tiezi.setPid(0);
+        tiezi.setStatus(0);
         tieziService.fatie(tiezi);
+
+        //返回相关数据
+        return md;
     }
 
     //回帖
@@ -143,11 +153,13 @@ public class TieziServlet {
         modelAndView.setViewName("about");
 
         modelAndView.addObject("id",id);
+
         HttpSession session = request.getSession();
         List<Users> users = (List<Users>) session.getAttribute("userInfo");
         if(users != null && users.size() > 0){
             Users users1 = users.get(0);
             modelAndView.addObject("uid",users1.getUid());
+
         }
 
         Tiezi tiezi = new Tiezi();

@@ -4,6 +4,8 @@ package com.zy.servlet;
 import com.zy.entity.Users;
 import com.zy.service.impl.LoginServiceImpl;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.authc.LockedAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,30 +74,39 @@ public class LoginServlet {
 
         boolean rememberMe = false;
 
-        UsernamePasswordToken token = new UsernamePasswordToken(username, password, rememberMe);
+        try {
+            UsernamePasswordToken token = new UsernamePasswordToken(username, password, rememberMe);
 
-        Subject subject = SecurityUtils.getSubject();
+            Subject subject = SecurityUtils.getSubject();
 
-        subject.login(token);
+            subject.login(token);
 
-        List<Users> list = loginService.login(users);
-        if (list != null) {
-            HttpSession session = request.getSession();
-            session.setAttribute("userInfo", list);
+            List<Users> list = loginService.login(users);
+            if (list != null) {
+                HttpSession session = request.getSession();
+                session.setAttribute("userInfo", list);
 
-            modelAndView.addObject("uid",list.get(0).getUid());
-            int trank = Integer.parseInt(list.get(0).getUtype());
-            if (trank == 0) {
-                modelAndView.setViewName("index");
-                //return "index";
-                //response.getWriter().print(0);
+                modelAndView.addObject("uid",list.get(0).getUid());
+                int trank = Integer.parseInt(list.get(0).getUtype());
+                if (trank == 0) {
+                    modelAndView.setViewName("index");
+                    //return "index";
+                    //response.getWriter().print(0);
+                } else {
+                    modelAndView.setViewName("admin/index");
+                    //return "admin/index";
+                    //response.getWriter().print(1);
+                }
             } else {
-                modelAndView.setViewName("admin/index");
-                //return "admin/index";
-                //response.getWriter().print(1);
+                response.getWriter().print("no");
             }
-        } else {
-            response.getWriter().print("no");
+        }  catch (AuthenticationException ae) {
+//			ae.printStackTrace();
+            modelAndView.setViewName("login");
+            modelAndView.addObject("msg", "账号或密码错误");
+        } catch (Exception e) {
+//			e.printStackTrace();
+            modelAndView.addObject("msg", "登录异常");
         }
 
         return modelAndView;
