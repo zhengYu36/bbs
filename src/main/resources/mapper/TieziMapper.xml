@@ -24,7 +24,7 @@
   </sql>
 
   <update id="TieziViewUpdate" parameterType="com.zy.entity.Tiezi">
-    update tiezi set tnum1 = tnum1+1 where tid = tid = #{tid,jdbcType=INTEGER}
+    update tiezi set tnum1 = tnum1+1 where tid = #{tid,jdbcType=INTEGER}
   </update>
 
   <insert id="replytie" parameterType="com.zy.entity.Replytiezi">

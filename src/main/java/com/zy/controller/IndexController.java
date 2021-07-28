@@ -1,8 +1,7 @@
-package com.zy.servlet;
+package com.zy.controller;
 
 import com.zy.entity.Users;
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 //里面包含了热帖和普通帖子
+//返回的实体
 public class TieziVo<T> {
 
     //普通帖子

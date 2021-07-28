@@ -2,15 +2,13 @@ package com.zy.service.impl;
 
 import com.zy.dao.UsersMapper;
 import com.zy.entity.Users;
-import com.zy.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
-public class UsersServiceImpl implements UsersService {
+public class UsersServiceImpl{
 
     @Autowired
     UsersMapper usersDao;
@@ -20,7 +18,6 @@ public class UsersServiceImpl implements UsersService {
      *
      * @return
      */
-    @Override
     public List<Users> usersManager() {
         return usersDao.UserManager();
     }
@@ -31,7 +28,6 @@ public class UsersServiceImpl implements UsersService {
      * @param id
      * @return
      */
-    @Override
     public List<Users> editUser(int id) {
         return usersDao.editUser(id);
     }
@@ -41,7 +37,6 @@ public class UsersServiceImpl implements UsersService {
      *
      * @param users
      */
-    @Override
     public void updateUser(Users users) {
         usersDao.updateUser(users);
     }
@@ -51,12 +46,11 @@ public class UsersServiceImpl implements UsersService {
      *
      * @param id
      */
-    @Override
     public void deleteUser(int id) {
         usersDao.deleteUser(id);
     }
 
-    @Override
+
     public void addUser(Users users) {
         usersDao.addUser(users);
     }

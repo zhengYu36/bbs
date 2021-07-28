@@ -6,7 +6,6 @@ import com.zy.entity.Replytiezi;
 import com.zy.entity.Tiezi;
 import com.zy.entity.Users;
 import com.zy.entity.vo.TieziVo;
-import com.zy.service.TieziService;
 import com.zy.untils.PageInfoUtils;
 import com.zy.untils.SqlPageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,27 +15,24 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class TieziServiceImpl implements TieziService {
+public class TieziServiceImpl {
 
-    /* @Autowired
-     TieziDao tieziDao;*/
     @Autowired
     TieziMapper tieziDao;
 
     @Autowired
     UsersMapper usersDao;
 
-    @Override
-    public TieziVo allTie(PageInfoUtils pageInfoUtils,String currentPage,Integer status) {
+    public TieziVo allTie(PageInfoUtils pageInfoUtils, String currentPage, Integer status) {
 
         TieziVo tv = new TieziVo();
 
         String sql = "";
-        if(status != null){
-            sql = "select t1.*,t2.uname from tiezi t1 left join users t2 on t1.uid = t2.uid where status = "+status+" " +
+        if (status != null) {
+            sql = "select t1.*,t2.uname from tiezi t1 left join users t2 on t1.uid = t2.uid where status = " + status + " " +
                     "order" +
                     " by t1.tdate desc";
-        }else{
+        } else {
             sql = "select t1.*,t2.uname from tiezi t1 left join users t2 on t1.uid = t2.uid order" +
                     " by t1.tdate desc";
         }
@@ -44,7 +40,6 @@ public class TieziServiceImpl implements TieziService {
         //总条数
         //String totalNumSql = SqlPageUtil.countSql(sql);
         long totalNum = tieziDao.tieziTotal(sql).size();
-
 
 
         //总页数
@@ -71,13 +66,11 @@ public class TieziServiceImpl implements TieziService {
      *
      * @return
      */
-    @Override
     public List<Tiezi> tieziShow() {
         List<Tiezi> tiezis = tieziDao.TieziShow();
         return tiezis;
     }
 
-    @Override
     public List<Tiezi> hottie() {
         return tieziDao.hottie();
     }
@@ -88,16 +81,12 @@ public class TieziServiceImpl implements TieziService {
      * @param tiezi
      * @return
      */
-    @Override
+    @Transactional
     public List<Tiezi> TieziSingleShow(Tiezi tiezi) {
         //根据id获取的帖子肯定只有一个
         List<Tiezi> result = tieziDao.TieziSingleShow(tiezi);
         //更新浏览次数
         tieziDao.TieziViewUpdate(tiezi);
-
-        //这里也可以假定失效，监测事物是否生效
-
-        //查询完成之后，浏览数量需要加1
 
         if (result != null && result.size() > 0) {
 
@@ -118,12 +107,10 @@ public class TieziServiceImpl implements TieziService {
      * @param tiezi
      * @return
      */
-    @Override
     public void fatie(Tiezi tiezi) {
         tieziDao.fatie(tiezi);
     }
 
-    @Override
     public void huitie(Replytiezi tiezi) {
         tieziDao.huitie(tiezi);
     }
@@ -133,17 +120,14 @@ public class TieziServiceImpl implements TieziService {
      *
      * @param id
      */
-    @Override
     public void deleteTiezi(int id) {
         tieziDao.deleteTiezi(id);
     }
 
-    @Override
     public void jiajing(int id) {
         tieziDao.jiajing(id);
     }
 
-    @Override
     public void replytie(Replytiezi tiezi) {
         tieziDao.replytie(tiezi);
     }

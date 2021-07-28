@@ -1,4 +1,4 @@
-package com.zy.servlet;
+package com.zy.controller;
 
 import com.zy.entity.Replytiezi;
 import com.zy.entity.Tiezi;
@@ -25,12 +25,12 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/tieziServlet")
-public class TieziServlet {
+public class TieziController {
 
     @Autowired
     TieziServiceImpl tieziService;
 
-
+    
     @RequestMapping(value = "/deleteTiezi",method = RequestMethod.POST)
     public void deleteTiezi(HttpServletRequest request,HttpServletResponse response) throws IOException {
         int id = Integer.parseInt(request.getParameter("id"));

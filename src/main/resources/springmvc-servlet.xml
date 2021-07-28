@@ -13,7 +13,19 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-3.0.xsd">  
   	<description>Spring-web MVC配置</description>
   	<!-- 开启自动扫描包 -->  
-    <context:component-scan base-package="com.zy.servlet"/>
+    <context:component-scan base-package="com.zy.*">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <!--
+        spring的是父容器
+        springmvc是子容器
+        子容器排除掉Service注解,让父容器来加载
+        但是我有一个疑问，为什么有的需要排除，有的又不需要排除呢？这个我感觉和版本有关系
+        毕竟在springboot中，配置都不需要了，所以很多问题就是不同的版本引起的
+        而且这个还没有办法去排除过多的问题额,所以很多时候哪怕多了一个接口的继承也会出现
+        问题的，所以不同的版本有点时候需要特别注意,因为老的问题不一定会被修复掉
+        -->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+    </context:component-scan>
     <!-- 开启注解驱动 -->  
     <mvc:annotation-driven/>
 

@@ -1,4 +1,4 @@
-package com.zy.servlet;
+package com.zy.controller;
 
 import com.zy.entity.Users;
 import com.zy.service.impl.UsersServiceImpl;
@@ -16,7 +16,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/usersServlet")
-public class UsersServlet {
+public class UsersController {
 
     @Autowired
     UsersServiceImpl usersService;
