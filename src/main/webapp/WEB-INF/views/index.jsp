@@ -32,12 +32,61 @@
             localStorage.setItem("uid",0);
         }
 
+        //检索，并重新渲染数据
+        function search() {
+            //普通帖子
+            let pageInfo = 1;
+            let title = $("#searchInfo").val();
+            $.ajax({
+                type: 'post',
+                url: '/tieziServlet/tieziShow?currentPage='+pageInfo+"&title="+title,
+                success: function (data) {
+                    var dataInfo = eval(data);
+                    var jsonData = dataInfo[0]['pt'];
+                    var pageInfo = dataInfo[0]['pageInfo'];
+                    //首先清空 老数据
+                    $("#tiezi").text("");
+                    //普通帖子
+                    for (var i = 0;i < jsonData.length;i++){
+                        $("#tiezi").append("<header><h3><a href='/tieziServlet/about/"+jsonData[i]['tid']+"'>"+jsonData[i]['title']+"</a></h3>"
+                            +"<p class=\"postinfo\">"+jsonData[i]['uname']+"<time>&nbsp;&nbsp;&nbsp;&nbsp;"
+                            +ChangeDateFormat(jsonData[i]['tdate'])+"</time></p></header>"
+                            +"<p>"+jsonData[i]['tcontent'].substr(0,100)+"……"+"</p>"
+                            +"<footer><span class=\"author\">浏览人数&nbsp;&nbsp;&nbsp;"+jsonData[i]['tnum1']+"</span>"
+                            +"<span>回帖人数&nbsp;&nbsp;&nbsp;"+jsonData[i]['tnum2']+"</span></footer><div class=\"clear\"></div>"
+                        )
+                    }
+
+                    $("#pageInfo").text("");
+                    //需要显示当前页
+                    //分页图标展示，并显示当前是那一页
+                    if(pageInfo != null){
+                        let pageCount = pageInfo['pageCount'];
+                        for(var i=0;i<pageCount;i++){
+                            let pageone;
+                            if(i==0){
+                                //默认选择第一页
+                                pageone = "<span class=\"current\">"+(i+1)+"</a>";;
+                            }else{
+                                pageone = "<a onclick=pageSkip("+(i+1)+")>"+(i+1)+"</a>";;
+                            }
+                            $("#pageInfo").append(pageone);
+                        }
+                    }
+
+                },
+                error: function () {
+                    alert("失败！")
+                }
+            })
+        }
 
         //翻页
         function pageSkip(index) {
+            let title = $("#searchInfo").val();
             $.ajax({
                 type: 'post',
-                url: '/tieziServlet/tieziShow?currentPage='+index,
+                url: '/tieziServlet/tieziShow?currentPage='+index+"&title="+title,
                 success: function (data) {
                     var dataInfo = eval(data);
                     var jsonData = dataInfo[0]['pt'];
@@ -176,9 +225,16 @@
                 </div>
             </section>
             <div id="leftcontainer">
-                <h2 class="mainheading">
+
+                <input id="searchInfo" type="text" name="title" lay-verify="title"
+                                                      autocomplete="off"
+                placeholder="请输入检索标题" class="layui-input" >
+
+                <label onclick="search()">搜索</label>
+
+               <%-- <h2 class="mainheading">
                     Latest from the blog
-                </h2>
+                </h2>--%>
 
                 <article class="post" id="tiezi">
                     <br>

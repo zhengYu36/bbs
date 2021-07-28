@@ -77,7 +77,7 @@ body {
 #bodywrap {
     width: 1000px;
     margin: 0 auto;
-    background: url(../images/wrapbg.jpg) center top no-repeat;
+    background: url(../images/wrapbg1.jpg) center top no-repeat;
     min-height: 400px;
     padding: 0 10px;
 }
@@ -365,7 +365,7 @@ body {
 }
 
 #pagefooter {
-    background: url(../images/footerbg.jpg) repeat-x;
+    background: url(../images/footerbg1.jpg) repeat-x;
     height: 89px;
 }
 

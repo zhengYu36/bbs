@@ -38,9 +38,47 @@ public class TieziServiceImpl {
         }
 
         //总条数
-        //String totalNumSql = SqlPageUtil.countSql(sql);
         long totalNum = tieziDao.tieziTotal(sql).size();
 
+        //总页数
+        long totalPage = SqlPageUtil.pageCount(pageInfoUtils.getPageSize(), totalNum);
+        pageInfoUtils.setPageCount(totalPage);
+        pageInfoUtils.setCurrentPage(Integer.parseInt(currentPage));
+
+        //分页sql
+        String pageSql = SqlPageUtil.pageSql(SqlPageUtil.Dialect.MySql, sql, pageInfoUtils.getPageSize(), Integer.parseInt(currentPage));
+        List<Tiezi> tiezis = tieziDao.TieziShowPage(pageSql);
+        pageInfoUtils.setData(tiezis);
+
+        tv.setPageInfo(pageInfoUtils);
+
+        //普通帖子
+        tv.setPt(tiezis);
+        //热帖不需要分页
+        tv.setHot(tieziDao.hottie());
+        return tv;
+    }
+
+    public TieziVo allTie(PageInfoUtils pageInfoUtils, String currentPage, Integer status,String title) {
+
+        TieziVo tv = new TieziVo();
+
+        //查询状态
+        String sql = "";
+        if (status != null) {
+            //根据状态查询
+            sql =
+                    "select t1.*,t2.uname from tiezi t1 left join users t2 on t1.uid = t2.uid where status = " + status + " and title like '%"+title+"%' " +
+                    "order" +
+                    " by t1.tdate desc";
+        } else {
+            //查询全部
+            sql = "select t1.*,t2.uname from tiezi t1 left join users t2 on t1.uid = t2.uid order" +
+                    " by t1.tdate desc";
+        }
+
+        //总条数
+        long totalNum = tieziDao.tieziTotal(sql).size();
 
         //总页数
         long totalPage = SqlPageUtil.pageCount(pageInfoUtils.getPageSize(), totalNum);

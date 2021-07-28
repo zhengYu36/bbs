@@ -120,11 +120,7 @@ public class TieziController {
             JSONArray jsonArray = JSONArray.fromObject(tieziList);
             response.getWriter().print(jsonArray);
         }
-/*        List<Tiezi> tieziList = tieziService.tieziShow();
-        if (tieziList != null) {
-            JSONArray jsonArray = JSONArray.fromObject(tieziList);
-            response.getWriter().print(jsonArray);
-        }*/
+
     }
 
     /**
@@ -144,11 +140,19 @@ public class TieziController {
                 currentPage = "1";
             }
         }
+        
+        //查询标题
+        String title = request.getParameter("title");
 
         //分页数据
         PageInfoUtils pageInfo = new PageInfoUtils();
         //查询全部帖子信息(普通帖子分页，热帖不进行分页)
-        TieziVo tieziList = tieziService.allTie(pageInfo,currentPage,0);
+        TieziVo tieziList = null;
+        if(StringUtils.isNotBlank(title)){
+            tieziList = tieziService.allTie(pageInfo,currentPage,0,title);
+        }else{
+            tieziList = tieziService.allTie(pageInfo,currentPage,0);
+        }
         if (tieziList != null) {
             JSONArray jsonArray = JSONArray.fromObject(tieziList);
             response.getWriter().print(jsonArray);
