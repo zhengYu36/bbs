@@ -8,6 +8,7 @@ import com.zy.entity.Users;
 import com.zy.entity.vo.TieziVo;
 import com.zy.untils.PageInfoUtils;
 import com.zy.untils.SqlPageUtil;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,8 @@ public class TieziServiceImpl {
 
     @Autowired
     UsersMapper usersDao;
+
+    private static Logger logger=Logger.getLogger(TieziServiceImpl.class);//获取Logger实例
 
     public TieziVo allTie(PageInfoUtils pageInfoUtils, String currentPage, Integer status) {
 
@@ -124,7 +127,11 @@ public class TieziServiceImpl {
     @Transactional
     @Cacheable(value="myCache", key="'get'+#tiezi.tid")
     public List<Tiezi> TieziSingleShow(Tiezi tiezi) {
-        System.out.println("检查cache是否生效");
+        //测试日志打印
+        /*logger.debug("debugxxxxx");
+        logger.info("infoxxxxxx");
+        logger.warn("warnxxxx");*/
+        //System.out.println("检查cache是否生效");
         //根据id获取的帖子肯定只有一个
         List<Tiezi> result = tieziDao.TieziSingleShow(tiezi);
         //更新浏览次数
