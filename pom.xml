@@ -180,11 +180,6 @@
             <version>1.2.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>net.sf.ehcache</groupId>
-            <artifactId>ehcache</artifactId>
-            <version>2.10.6</version>
-        </dependency>
 
         <!-- mybatis代码通用生成 -->
         <dependency>
@@ -193,11 +188,26 @@
             <version>1.3.7</version>
         </dependency>
 
+
+        <!--        <dependency>
+                    <groupId>net.sf.ehcache</groupId>
+                    <artifactId>ehcache-core</artifactId>
+                    <version>2.6.11</version>
+                </dependency>-->
+
+        <!-- ehcache缓存的使用 -->
         <dependency>
             <groupId>net.sf.ehcache</groupId>
             <artifactId>ehcache</artifactId>
             <version>2.10.6</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.googlecode.ehcache-spring-annotations</groupId>
+            <artifactId>ehcache-spring-annotations</artifactId>
+            <version>1.2.0</version>
+        </dependency>
+
 
         <dependency>
             <groupId>log4j</groupId>

@@ -9,6 +9,7 @@ import com.zy.entity.vo.TieziVo;
 import com.zy.untils.PageInfoUtils;
 import com.zy.untils.SqlPageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -115,12 +116,15 @@ public class TieziServiceImpl {
 
     /**
      * 查询单个帖子
-     *
+     * 这个测试了缓存，并且也测试了事务
+     * 注意而且有的时候磁盘中看不到临时文件，是因为保存到了内存中的
      * @param tiezi
      * @return
      */
     @Transactional
+    @Cacheable(value="myCache", key="'get'+#tiezi.tid")
     public List<Tiezi> TieziSingleShow(Tiezi tiezi) {
+        System.out.println("检查cache是否生效");
         //根据id获取的帖子肯定只有一个
         List<Tiezi> result = tieziDao.TieziSingleShow(tiezi);
         //更新浏览次数

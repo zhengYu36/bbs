@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">
+<ehcache name="bbsTestEhcache">
     <!-- 磁盘缓存位置 -->
-    <diskStore path="java.io.tmpdir/shiro-spring-sample"/>
+    <diskStore path="java.io.tmpdir/bbs-spring-info"/>
 
     <!-- 默认缓存 -->
     <defaultCache
@@ -16,12 +15,20 @@
         <persistence strategy="localTempSwap"/>
     </defaultCache>
 
-    <!-- helloworld缓存测试 -->
-<!--    <cache name="HelloWorldCache"
+    <cache name="tieziInfo"
            maxElementsInMemory="1000"
            eternal="false"
            timeToIdleSeconds="5"
            timeToLiveSeconds="5"
            overflowToDisk="false"
-           memoryStoreEvictionPolicy="LRU"/>-->
+           memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="myCache"
+           eternal="false"
+           maxElementsInMemory="10000"
+           overflowToDisk="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="0"
+           memoryStoreEvictionPolicy="LFU"/>
+
 </ehcache>
